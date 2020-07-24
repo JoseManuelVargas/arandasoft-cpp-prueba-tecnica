@@ -24,3 +24,6 @@ Se proponen las siguientes ramas para el manejo del proyecto
 * desarrollo: Rama usada para crear módulosy código nuevo. Dentro de esta rama se manejarán los diferentes módulos y funcionalidades.
 * errores: Se tendrán ramas por errores reportados
 
+## Documentación
+
+Se tiene el modela hecho de acuerdo a UML. Para ello se guardan en archivos XML para facilitar el versionamiento. Sin embargo se usará la siguiente carpeta dr [drive](https://drive.google.com/drive/folders/1Nn47Xoq1NjK3ruurDJm0apEtBZ9_Y2KP?usp=sharing) para subir los archivos de Enterprise Architect.
