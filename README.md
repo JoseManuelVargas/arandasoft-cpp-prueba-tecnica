@@ -28,4 +28,5 @@ Se proponen las siguientes ramas para el manejo del proyecto
 
 * Se tiene el modela hecho de acuerdo a UML. Para ello se guardan en archivos XML para facilitar el versionamiento. Sin embargo se usará la siguiente carpeta de [drive](https://drive.google.com/drive/folders/1Nn47Xoq1NjK3ruurDJm0apEtBZ9_Y2KP?usp=sharing) para subir los archivos de Enterprise Architect.
 * Para la gestión de tareas y actividades se usa el siguiente [tablero](https://trello.com/b/imyAlWAY/prueba-t%C3%A9cnica) en [trello](https://trello.com/es).
+* Para visualizar la descripción de los endpoints se debe abrir el [archivo](docs/ENDPOINTS/swagger.yaml) y pegar el contenido en el editor de [swagger](https://editor.swagger.io/).
 

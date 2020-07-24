@@ -1,0 +1,130 @@
+swagger: "2.0"
+info:
+  description: "Se describen los endpoints de la prueba para arandasoft de desarrollador C++. Más información en el [repositorio](https://github.com/JoseManuelVargas/arandasoft-cpp-prueba-tecnica)"
+  version: "0.1.0"
+  title: "Endpoints Prueba Arandasoft C++"
+  termsOfService: "http://swagger.io/terms/"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "www.google.es"
+basePath: "/api"
+tags:
+- name: "arbolbinario"
+  description: "Servicios relacionados con el manejo de árboles binarios"
+schemes:
+- "https"
+- "http"
+paths:
+  /arbolbinario/crear:
+    post:
+      tags:
+      - "arbolbinario"
+      summary: "Crear nuevo árbol binario."
+      description: "Se creara un nnuevo árbol binario con los valores enviados y se almacena en base de datos"
+      operationId: "crearArbol"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Nombre del árbol y lista de valores"
+        required: true
+        schema:
+          $ref: "#/definitions/NuevoArbol"
+      responses:
+        "200":
+          description: "Operación con éxito"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/RespuestaArbolCreado"
+        "400":
+          description: "Estatus inválido"
+        "404":
+          description: "Error"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/RespuestaError"
+    
+  /arbolbinario/ancestrocomun:
+    post:
+      tags:
+      - "arbolbinario"
+      summary: "Encuentra el ancestro común a dos nodos"
+      description: "Retorna el valor del nodo ancestro común más cercano a los dos nodos enviados del árbol solicitado"
+      operationId: "ancestroComun"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Nombre del árbol y los valores de los dos nodos"
+        required: true
+        schema:
+          $ref: "#/definitions/AncestroNodos"
+      responses:
+        "200":
+          description: "Operación con éxito"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/RespuestaAncestroComun"
+        "400":
+          description: "Estatus inválido"
+        "404":
+          description: "Error"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/RespuestaError"
+
+definitions:
+  NuevoArbol:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      valores:
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        description: "Valores para crear el árbol"
+  AncestroNodos:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+  RespuestaError:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      mensaje:
+        type: "string"
+  RespuestaAncestroComun:
+    type: "object"
+    properties:
+      valor:
+        type: "integer"
+        format: "int64"
+      mensaje:
+        type: "string"
+  RespuestaArbolCreado:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      nombre:
+        type: "string"
