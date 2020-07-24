@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" xmlns:EAREQ="http://www.sparxsystems.com/profiles/EAREQ/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" name="Requerimientos" visibility="public">
+			<ownedComment xmi:type="uml:Comment" xmi:id="EAID_6DED2B6B_3846_4758_BD0B_A08FAFA9B356" body="Se usa R.*.* para requerimientos funcionales&#xA;Se usa RN.*.* para no funcionales"/>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4" name="RN.1.4. Se deben usar patrones de diseño" visibility="public">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" visibility="public" association="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+					<type xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Association" xmi:id="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" visibility="public">
+				<memberEnd xmi:idref="EAID_dst4DDCBF_EC62_472d_AF5C_9AB61E97A2C3"/>
+				<memberEnd xmi:idref="EAID_src4DDCBF_EC62_472d_AF5C_9AB61E97A2C3"/>
+				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" visibility="public" association="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+					<type xmi:idref="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+				</ownedEnd>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" name="Requirements" visibility="public">
+				<packagedElement xmi:type="uml:Class" xmi:id="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" name="R1. El sistema debe exponer endpoints REST para servicios con árboles binarios" visibility="public">
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F" name="R1.1. El sistema debe proveer un endpoint para crear árboles binarios" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstCE7911_621A_4def_B52C_44C9CBC8B3A3" visibility="public" association="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+						</ownedAttribute>
+					</nestedClassifier>
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11" name="R1.2. El sistema debe proveer un endpoint para consultar el ancestro común más cercano a dos nodos de un árbol bionario" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstC473EF_33EC_4a01_A47D_18CF1AC6098E" visibility="public" association="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+						</ownedAttribute>
+					</nestedClassifier>
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_F2447631_14A8_486a_93E3_981D0B790699" name="R1.3. El sistema debe almacenar la información de manera persistente en una base de datos SQL embebida" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstA0D94C_7417_460f_B3B3_92D73DEDBCB4" visibility="public" association="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+						</ownedAttribute>
+					</nestedClassifier>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" visibility="public">
+					<memberEnd xmi:idref="EAID_dstA0D94C_7417_460f_B3B3_92D73DEDBCB4"/>
+					<memberEnd xmi:idref="EAID_srcA0D94C_7417_460f_B3B3_92D73DEDBCB4"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcA0D94C_7417_460f_B3B3_92D73DEDBCB4" visibility="public" association="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_F2447631_14A8_486a_93E3_981D0B790699"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" visibility="public">
+					<memberEnd xmi:idref="EAID_dstC473EF_33EC_4a01_A47D_18CF1AC6098E"/>
+					<memberEnd xmi:idref="EAID_srcC473EF_33EC_4a01_A47D_18CF1AC6098E"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcC473EF_33EC_4a01_A47D_18CF1AC6098E" visibility="public" association="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" visibility="public">
+					<memberEnd xmi:idref="EAID_dstCE7911_621A_4def_B52C_44C9CBC8B3A3"/>
+					<memberEnd xmi:idref="EAID_srcCE7911_621A_4def_B52C_44C9CBC8B3A3"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcCE7911_621A_4def_B52C_44C9CBC8B3A3" visibility="public" association="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Class" xmi:id="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" name="RN.1. Requerimientos de desempeño" visibility="public">
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_41738ECC_68DF_477f_A141_163D116F50EA" name="RN1.1. El sistema debe soportar miles de peticiones por minuto." visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstC3A265_6E4C_437b_8DF1_FFA23C844FEF" visibility="public" association="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+						</ownedAttribute>
+					</nestedClassifier>
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636" name="RN1.2. El código fuente debe estar versionado en un repositorio GIT" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst7DF469_9637_4251_B33C_4FE546EE4315" visibility="public" association="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+						</ownedAttribute>
+					</nestedClassifier>
+					<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_DD975792_4938_4436_B697_66F0587DF935" name="RN1.3. El sistema debe estar desarrollado en C++" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstAAD5C6_7F2D_48be_99F5_CD7392956FA2" visibility="public" association="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+						</ownedAttribute>
+					</nestedClassifier>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" visibility="public">
+					<memberEnd xmi:idref="EAID_dstC3A265_6E4C_437b_8DF1_FFA23C844FEF"/>
+					<memberEnd xmi:idref="EAID_srcC3A265_6E4C_437b_8DF1_FFA23C844FEF"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcC3A265_6E4C_437b_8DF1_FFA23C844FEF" visibility="public" association="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" visibility="public">
+					<memberEnd xmi:idref="EAID_dst7DF469_9637_4251_B33C_4FE546EE4315"/>
+					<memberEnd xmi:idref="EAID_src7DF469_9637_4251_B33C_4FE546EE4315"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src7DF469_9637_4251_B33C_4FE546EE4315" visibility="public" association="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" visibility="public">
+					<memberEnd xmi:idref="EAID_dstAAD5C6_7F2D_48be_99F5_CD7392956FA2"/>
+					<memberEnd xmi:idref="EAID_srcAAD5C6_7F2D_48be_99F5_CD7392956FA2"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcAAD5C6_7F2D_48be_99F5_CD7392956FA2" visibility="public" association="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="shared">
+						<type xmi:idref="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					</ownedEnd>
+				</packagedElement>
+			</packagedElement>
+		</packagedElement>
+		<EAREQ:NonfunctionalRequirement base_Class="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+		<thecustomprofile:Functional base_Class="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+		<thecustomprofile:Functional base_Class="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F"/>
+		<thecustomprofile:Functional base_Class="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11"/>
+		<thecustomprofile:Functional base_Class="EAID_F2447631_14A8_486a_93E3_981D0B790699"/>
+		<EAREQ:NonfunctionalRequirement base_Class="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+		<EAREQ:NonfunctionalRequirement base_Class="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+		<EAREQ:NonfunctionalRequirement base_Class="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+		<EAREQ:NonfunctionalRequirement base_Class="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" xmi:type="uml:Package" name="Requerimientos" scope="public">
+				<model package2="EAID_4C566E1F_3214_4bc1_83B3_74961EB696B0" package="EAPK_03A36D1B_BFD1_4be1_A5BA_0874C829C3AE" tpos="1" ea_localid="5" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 15:45:40" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties version="1.0" tpos="1"/>
+				<paths/>
+				<times created="2020-07-24 15:02:11" modified="2020-07-24 15:45:40" lastloaddate="2017-07-20 13:52:47" lastsavedate="2017-07-20 13:52:47"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4" xmi:type="uml:Requirement" name="RN.1.4. Se deben usar patrones de diseño" scope="public">
+				<model package="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" tpos="0" ea_localid="28" ea_eleType="element"/>
+				<properties documentation="Se deben usar patrones de arquitectura y de software." isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="NonfunctionalRequirement"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:16:30" modified="2020-07-24 16:17:10" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_16D6BA3B_EB00_79eb_BB55_801EA3D8A9D9" name="availability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_4DD08CCB_C370_51c3_8EEA_4728739202E7" name="configurability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_F9C54226_4D6B_6d4d_9DFC_3953216D3E59" name="interoperability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_E7B72E7F_6524_3865_AC4A_01C9729B0529" name="maintainability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_1D76A8D3_54F8_6454_A1B8_D8DB26006220" name="portability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_A142CBA2_61E7_2a61_9AA7_1E6130EA460C" name="priority" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_1E079C5A_487F_f548_AD4F_08E6C6319E5A" name="reliability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_5EBBD2F1_7F16_a97f_AE0D_0D222B7B5C55" name="scalability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+					<tag xmi:id="EAID_7585ED36_4C1B_604c_9E2F_B9D1363D9BC4" name="usability" value="&lt;memo&gt;" modelElement="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={2D22791C-F653-49c7-95CA-81118B1E35DF}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=NonfunctionalRequirement;FQName=EAREQ::NonfunctionalRequirement;@ENDSTEREO;$DES;$CLT={CB871290-2EF5-45b6-B780-B0691EBCEFA4}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requerimientos"/>
+				<links>
+					<Aggregation xmi:id="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" start="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_6DED2B6B_3846_4758_BD0B_A08FAFA9B356" xmi:type="uml:Note" scope="public">
+				<model package="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" tpos="0" ea_localid="27" ea_eleType="element"/>
+				<properties documentation="Se usa R.*.* para requerimientos funcionales&#xA;Se usa RN.*.* para no funcionales" isSpecification="false" sType="Note" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:14:43" modified="2020-07-24 16:15:03" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requerimientos"/>
+			</element>
+			<element xmi:idref="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" xmi:type="uml:Package" name="Requirements" scope="public">
+				<model package2="EAID_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" package="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" tpos="0" ea_localid="6" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 15:02:11" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requerimientos"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2020-07-24 15:02:11" modified="2017-08-01 13:00:21" lastloaddate="2017-07-27 13:10:06" lastsavedate="2017-07-27 13:10:06"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" xmi:type="uml:Requirement" name="R1. El sistema debe exponer endpoints REST para servicios con árboles binarios" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" tpos="0" ea_localid="19" ea_eleType="element"/>
+				<properties documentation="Los endpoints deben ser REST&#xA;&#xA;" isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="Functional"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 15:58:36" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={90C7533B-5ECD-45ce-AE8F-E077184F787A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Functional;GUID={7DAC15EA-CA95-427f-9687-17512CD216A6};@ENDSTEREO;$DES;$CLT={BCF632F4-71A0-48a3-89EA-11342F67ED37}$CLT;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" start="EAID_F2447631_14A8_486a_93E3_981D0B790699" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+					<Aggregation xmi:id="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" start="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+					<Aggregation xmi:id="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" start="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F" xmi:type="uml:Requirement" name="R1.1. El sistema debe proveer un endpoint para crear árboles binarios" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" tpos="1" ea_localid="20" ea_eleType="element"/>
+				<properties documentation="En la petici&amp;#243;n el usuario describir&amp;#225; la estructura del &amp;#225;rbol binario" isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="Functional"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 15:59:00" complexity="1" status="Approved" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={86B64964-BFF2-47d2-997C-69F6867A838C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Functional;GUID={7DAC15EA-CA95-427f-9687-17512CD216A6};@ENDSTEREO;$DES;$CLT={77156DFF-FF99-479a-B975-0C7B2F185E4F}$CLT;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" start="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11" xmi:type="uml:Requirement" name="R1.2. El sistema debe proveer un endpoint para consultar el ancestro común más cercano a dos nodos de un árbol bionario" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" tpos="2" ea_localid="17" ea_eleType="element"/>
+				<properties documentation="Se debe retornar el ancestro&#xA;" isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="Functional"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 16:00:54" complexity="1" status="Validated" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={E3DF598F-E082-43b7-8FF8-A6F87679E50F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Functional;GUID={7DAC15EA-CA95-427f-9687-17512CD216A6};@ENDSTEREO;$DES;$CLT={3C950D55-C68E-4e66-BEB9-21FEB04E4E11}$CLT;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" start="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F2447631_14A8_486a_93E3_981D0B790699" xmi:type="uml:Requirement" name="R1.3. El sistema debe almacenar la información de manera persistente en una base de datos SQL embebida" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" tpos="3" ea_localid="21" ea_eleType="element"/>
+				<properties documentation="Se debe utilizar SQLite como gestor de base de datos." isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="Functional"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 15:02:11" modified="2020-07-24 16:19:37" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={8984B726-7617-46c8-9885-F6952E902599}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Functional;GUID={7DAC15EA-CA95-427f-9687-17512CD216A6};@ENDSTEREO;$DES;$CLT={F2447631-14A8-486a-93E3-981D0B790699}$CLT;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" start="EAID_F2447631_14A8_486a_93E3_981D0B790699" end="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" xmi:type="uml:Requirement" name="RN.1. Requerimientos de desempeño" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" tpos="0" ea_localid="23" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="NonfunctionalRequirement"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:02:07" modified="2020-07-24 16:14:25" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_16D6BA3B_EB00_79eb_ADAB_E109D615B02D" name="availability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_4DD08CCB_C370_51c3_85E4_925A83E36717" name="configurability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_F9C54226_4D6B_6d4d_83B1_CCB578FB0B63" name="interoperability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_E7B72E7F_6524_3865_B307_34A50159F8F2" name="maintainability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_1D76A8D3_54F8_6454_BABA_79D043B14640" name="portability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_A142CBA2_61E7_2a61_B312_57ACA554E4C7" name="priority" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_1E079C5A_487F_f548_B259_3F51080C1031" name="reliability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_5EBBD2F1_7F16_a97f_84A3_13BB3F2A2DD9" name="scalability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<tag xmi:id="EAID_7585ED36_4C1B_604c_8EBD_8E7914B01380" name="usability" value="&lt;memo&gt;" modelElement="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={5A00CF14-8845-450a-AE3E-C8E49C22671D}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=NonfunctionalRequirement;FQName=EAREQ::NonfunctionalRequirement;@ENDSTEREO;$DES;$CLT={DD9EEB90-32F2-4879-8BA5-6ADB424E12AA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" start="EAID_41738ECC_68DF_477f_A141_163D116F50EA" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<Aggregation xmi:id="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" start="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<Aggregation xmi:id="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" start="EAID_DD975792_4938_4436_B697_66F0587DF935" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+					<Aggregation xmi:id="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" start="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_41738ECC_68DF_477f_A141_163D116F50EA" xmi:type="uml:Requirement" name="RN1.1. El sistema debe soportar miles de peticiones por minuto." scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" tpos="0" ea_localid="24" ea_eleType="element"/>
+				<properties documentation="Se deben realizar pruebas de desempe&amp;#241;o con varias peticiones por minuto&#xA;" isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="NonfunctionalRequirement"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:02:59" modified="2020-07-24 16:14:09" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_16D6BA3B_EB00_79eb_BBD0_499AA9437164" name="availability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_4DD08CCB_C370_51c3_A30B_A246EC4F97A6" name="configurability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_F9C54226_4D6B_6d4d_907E_F36C388B3B56" name="interoperability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_E7B72E7F_6524_3865_8DB2_B5A2E96F48BD" name="maintainability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_1D76A8D3_54F8_6454_A70C_2F8C35E84D5C" name="portability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_A142CBA2_61E7_2a61_AB4E_2A970CD99E97" name="priority" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_1E079C5A_487F_f548_9CA9_330AFD946CB4" name="reliability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_5EBBD2F1_7F16_a97f_8F0E_A11443E89D43" name="scalability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+					<tag xmi:id="EAID_7585ED36_4C1B_604c_ACE9_4C4CDFB7D436" name="usability" value="&lt;memo&gt;" modelElement="EAID_41738ECC_68DF_477f_A141_163D116F50EA"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={5A238C34-20CC-4467-92E0-2FBF2DD5715F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=NonfunctionalRequirement;FQName=EAREQ::NonfunctionalRequirement;@ENDSTEREO;$DES;$CLT={41738ECC-68DF-477f-A141-163D116F50EA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" start="EAID_41738ECC_68DF_477f_A141_163D116F50EA" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636" xmi:type="uml:Requirement" name="RN1.2. El código fuente debe estar versionado en un repositorio GIT" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" tpos="0" ea_localid="25" ea_eleType="element"/>
+				<properties documentation="Se deben utilizar diferentes ramas" isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="NonfunctionalRequirement"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:03:04" modified="2020-07-24 16:19:13" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_16D6BA3B_EB00_79eb_AA61_F88967CE570C" name="availability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_4DD08CCB_C370_51c3_9F95_1FA3E91DF572" name="configurability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_F9C54226_4D6B_6d4d_BC1C_9B0D71055819" name="interoperability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_E7B72E7F_6524_3865_8A1B_8FD206FC9985" name="maintainability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_1D76A8D3_54F8_6454_BD15_3BFA77CC6EE2" name="portability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_A142CBA2_61E7_2a61_A4A0_C12444D60CDF" name="priority" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_1E079C5A_487F_f548_94DE_BCF81B8FF34A" name="reliability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_5EBBD2F1_7F16_a97f_8D9E_14B1919E3CB1" name="scalability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+					<tag xmi:id="EAID_7585ED36_4C1B_604c_91AA_42BD3E742A17" name="usability" value="&lt;memo&gt;" modelElement="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={D7F724C2-0D79-4dc6-BDE1-EDB961A83D43}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=NonfunctionalRequirement;FQName=EAREQ::NonfunctionalRequirement;@ENDSTEREO;$DES;$CLT={0DD79FB7-43A9-4b93-861E-74F1554DA636}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" start="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_DD975792_4938_4436_B697_66F0587DF935" xmi:type="uml:Requirement" name="RN1.3. El sistema debe estar desarrollado en C++" scope="public">
+				<model package="EAPK_D0E9CBB7_D97A_4518_B0BB_23A8202F32FE" owner="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" tpos="0" ea_localid="26" ea_eleType="element"/>
+				<properties documentation="Se debe utilizar un est&amp;#225;ndar moderno del lenguaje de programaci&amp;#243;n, as&amp;#237; como lasherramientas modernas del mismo." isSpecification="false" sType="Requirement" nType="0" scope="public" stereotype="NonfunctionalRequirement"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 16:11:27" modified="2020-07-24 16:12:12" complexity="1" status="Proposed" difficulty="Medium" priority="Medium"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_16D6BA3B_EB00_79eb_B5E3_15A018EC31B8" name="availability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_4DD08CCB_C370_51c3_8C21_3FB4D065AC0A" name="configurability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_F9C54226_4D6B_6d4d_92FC_71A3A2D05A55" name="interoperability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_E7B72E7F_6524_3865_8797_182428EE7D0A" name="maintainability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_1D76A8D3_54F8_6454_97FF_8DA054EB5896" name="portability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_A142CBA2_61E7_2a61_8592_7991B6217269" name="priority" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_1E079C5A_487F_f548_9092_ACF6BA75D168" name="reliability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_5EBBD2F1_7F16_a97f_BCF0_97EDED7CF5D8" name="scalability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+					<tag xmi:id="EAID_7585ED36_4C1B_604c_ACA1_B7DF97DB9F2F" name="usability" value="&lt;memo&gt;" modelElement="EAID_DD975792_4938_4436_B697_66F0587DF935"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={6E6C5313-ED41-4adc-9EE9-AB198A76814C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=NonfunctionalRequirement;FQName=EAREQ::NonfunctionalRequirement;@ENDSTEREO;$DES;$CLT={DD975792-4938-4436-B697-66F0587DF935}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Requirements"/>
+				<links>
+					<Aggregation xmi:id="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" start="EAID_DD975792_4938_4436_B697_66F0587DF935" end="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3">
+				<source xmi:idref="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4">
+					<model ea_localid="28" type="Requirement" name="RN.1.4. Se deben usar patrones de diseño"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA">
+					<model ea_localid="23" type="Requirement" name="RN.1. Requerimientos de desempeño"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="21"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4">
+				<source xmi:idref="EAID_F2447631_14A8_486a_93E3_981D0B790699">
+					<model ea_localid="21" type="Requirement" name="R1.3. El sistema debe almacenar la información de manera persistente en una base de datos SQL embebida"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37">
+					<model ea_localid="19" type="Requirement" name="R1. El sistema debe exponer endpoints REST para servicios con árboles binarios"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="10"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E">
+				<source xmi:idref="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11">
+					<model ea_localid="17" type="Requirement" name="R1.2. El sistema debe proveer un endpoint para consultar el ancestro común más cercano a dos nodos de un árbol bionario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37">
+					<model ea_localid="19" type="Requirement" name="R1. El sistema debe exponer endpoints REST para servicios con árboles binarios"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="13"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3">
+				<source xmi:idref="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F">
+					<model ea_localid="20" type="Requirement" name="R1.1. El sistema debe proveer un endpoint para crear árboles binarios"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37">
+					<model ea_localid="19" type="Requirement" name="R1. El sistema debe exponer endpoints REST para servicios con árboles binarios"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="11"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF">
+				<source xmi:idref="EAID_41738ECC_68DF_477f_A141_163D116F50EA">
+					<model ea_localid="24" type="Requirement" name="RN1.1. El sistema debe soportar miles de peticiones por minuto."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA">
+					<model ea_localid="23" type="Requirement" name="RN.1. Requerimientos de desempeño"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="18"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315">
+				<source xmi:idref="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636">
+					<model ea_localid="25" type="Requirement" name="RN1.2. El código fuente debe estar versionado en un repositorio GIT"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA">
+					<model ea_localid="23" type="Requirement" name="RN.1. Requerimientos de desempeño"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="19"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2">
+				<source xmi:idref="EAID_DD975792_4938_4436_B697_66F0587DF935">
+					<model ea_localid="26" type="Requirement" name="RN1.3. El sistema debe estar desarrollado en C++"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA">
+					<model ea_localid="23" type="Requirement" name="RN.1. Requerimientos de desempeño"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="shared" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="20"/>
+				<properties ea_type="Aggregation" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Functional" name="Functional">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Functional-base_Class" name="base_Class" association="Class_Functional">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Functional" name="A_Class_Functional" memberEnd="extension_Functional Functional-base_Class">
+					<ownedEnd xmi:id="extension_Functional" name="extension_Functional" type="Functional" isComposite="true" lower="0" upper="1" memberEnd="extension_Functional Functional-base_Class"/>
+				</packagedElement>
+			</uml:Profile>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="92519A79-0" nsPrefix="EAREQ" name="EAREQ" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="92519A79-0">
+					<body>EAREQ Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="NonfunctionalRequirement" name="NonfunctionalRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-base_Requirement" name="base_Requirement" association="Requirement_NonfunctionalRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-reliability" name="reliability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-availability" name="availability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-interoperability" name="interoperability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-scalability" name="scalability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-usability" name="usability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-portability" name="portability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-configurability" name="configurability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NonfunctionalRequirement-maintainability" name="maintainability">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_NonfunctionalRequirement" name="A_Requirement_NonfunctionalRequirement" memberEnd="extension_NonfunctionalRequirement NonfunctionalRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_NonfunctionalRequirement" name="extension_NonfunctionalRequirement" type="NonfunctionalRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_NonfunctionalRequirement NonfunctionalRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RegulatoryRequirement" name="RegulatoryRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RegulatoryRequirement-base_Requirement" name="base_Requirement" association="Requirement_RegulatoryRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RegulatoryRequirement-internalRegulation" name="internalRegulation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RegulatoryRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RegulatoryRequirement-externalRegulation" name="externalRegulation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RegulatoryRequirement-legislativeRegulation" name="legislativeRegulation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_RegulatoryRequirement" name="A_Requirement_RegulatoryRequirement" memberEnd="extension_RegulatoryRequirement RegulatoryRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_RegulatoryRequirement" name="extension_RegulatoryRequirement" type="RegulatoryRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_RegulatoryRequirement RegulatoryRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SecurityRequirement" name="SecurityRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SecurityRequirement-base_Requirement" name="base_Requirement" association="Requirement_SecurityRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SecurityRequirement-policy" name="policy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SecurityRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SecurityRequirement-goal" name="goal">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_SecurityRequirement" name="A_Requirement_SecurityRequirement" memberEnd="extension_SecurityRequirement SecurityRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_SecurityRequirement" name="extension_SecurityRequirement" type="SecurityRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_SecurityRequirement SecurityRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="BusinessRequirement" name="BusinessRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-base_Requirement" name="base_Requirement" association="Requirement_BusinessRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-scope" name="scope">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-constraint" name="constraint">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-context" name="context">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-rules" name="rules">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BusinessRequirement-objective" name="objective">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_BusinessRequirement" name="A_Requirement_BusinessRequirement" memberEnd="extension_BusinessRequirement BusinessRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_BusinessRequirement" name="extension_BusinessRequirement" type="BusinessRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_BusinessRequirement BusinessRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="UserRequirement" name="UserRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-base_Requirement" name="base_Requirement" association="Requirement_UserRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-designation" name="designation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-impact" name="impact">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-communication" name="communication">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UserRequirement-expectation" name="expectation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_UserRequirement" name="A_Requirement_UserRequirement" memberEnd="extension_UserRequirement UserRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_UserRequirement" name="extension_UserRequirement" type="UserRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_UserRequirement UserRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="FunctionalRequirement" name="FunctionalRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-base_Requirement" name="base_Requirement" association="Requirement_FunctionalRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-dataDescription" name="dataDescription">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-reportDescription" name="reportDescription">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-operationDescription" name="operationDescription">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FunctionalRequirement-workflowDescription" name="workflowDescription">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_FunctionalRequirement" name="A_Requirement_FunctionalRequirement" memberEnd="extension_FunctionalRequirement FunctionalRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_FunctionalRequirement" name="extension_FunctionalRequirement" type="FunctionalRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_FunctionalRequirement FunctionalRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RequirementsChecklist" name="RequirementsChecklist">
+					<generalization xmi:type="uml:Generalization" xmi:id="RequirementsChecklist_EAUML::Checklist_generalization" general="EAUML::Checklist"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RequirementsChecklist-base_Artifact" name="base_Artifact" association="Artifact_RequirementsChecklist">
+						<type href="http://schema.omg.org/spec/UML/2.1/Artifact"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RequirementsChecklist-status" name="status">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RequirementsChecklist-dateChecked" name="dateChecked">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RequirementsChecklist-Checklist" name="Checklist">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RequirementsChecklist-author" name="author">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Artifact_RequirementsChecklist" name="A_Artifact_RequirementsChecklist" memberEnd="extension_RequirementsChecklist RequirementsChecklist-base_Artifact">
+					<ownedEnd xmi:id="extension_RequirementsChecklist" name="extension_RequirementsChecklist" type="RequirementsChecklist" isComposite="true" lower="0" upper="1" memberEnd="extension_RequirementsChecklist RequirementsChecklist-base_Artifact"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ArchitecturalRequirement" name="ArchitecturalRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ArchitecturalRequirement-base_Requirement" name="base_Requirement" association="Requirement_ArchitecturalRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ArchitecturalRequirement-hardware" name="hardware">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ArchitecturalRequirement-performance" name="performance">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ArchitecturalRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ArchitecturalRequirement-software" name="software">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_ArchitecturalRequirement" name="A_Requirement_ArchitecturalRequirement" memberEnd="extension_ArchitecturalRequirement ArchitecturalRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_ArchitecturalRequirement" name="extension_ArchitecturalRequirement" type="ArchitecturalRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_ArchitecturalRequirement ArchitecturalRequirement-base_Requirement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ImplementationRequirement" name="ImplementationRequirement">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ImplementationRequirement-base_Requirement" name="base_Requirement" association="Requirement_ImplementationRequirement">
+						<type href="http://schema.omg.org/spec/UML/2.1/Requirement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ImplementationRequirement-migration" name="migration">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ImplementationRequirement-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ImplementationRequirement-recruitment" name="recruitment">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ImplementationRequirement-roleChange" name="roleChange">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Requirement_ImplementationRequirement" name="A_Requirement_ImplementationRequirement" memberEnd="extension_ImplementationRequirement ImplementationRequirement-base_Requirement">
+					<ownedEnd xmi:id="extension_ImplementationRequirement" name="extension_ImplementationRequirement" type="ImplementationRequirement" isComposite="true" lower="0" upper="1" memberEnd="extension_ImplementationRequirement ImplementationRequirement-base_Requirement"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+		<diagrams>
+			<diagram xmi:id="EAID_83753EDD_778C_4710_806D_496062A610CC">
+				<model package="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0" localID="2" owner="EAPK_4C566E1F_3214_4bc1_83B3_74961EB696B0"/>
+				<properties name="Diagrama de requerimientos" type="Custom"/>
+				<project author="jomva" version="1.0" created="2020-07-24 15:02:12" modified="2020-07-24 16:16:55"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=0;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=1;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=3F68701F;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=709;Top=670;Right=849;Bottom=714;" subject="EAID_CB871290_2EF5_45b6_B780_B0691EBCEFA4" seqno="1" style="DUID=3280617B;HideIcon=0;"/>
+					<element geometry="Left=879;Top=467;Right=994;Bottom=551;" subject="EAID_6DED2B6B_3846_4758_BD0B_A08FAFA9B356" seqno="2" style="DUID=44C182F8;"/>
+					<element geometry="Left=507;Top=666;Right=647;Bottom=798;" subject="EAID_DD975792_4938_4436_B697_66F0587DF935" seqno="3" style="DUID=AA9C7547;HideIcon=0;"/>
+					<element geometry="Left=340;Top=673;Right=450;Bottom=792;" subject="EAID_0DD79FB7_43A9_4b93_861E_74F1554DA636" seqno="4" style="DUID=2A688551;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;"/>
+					<element geometry="Left=183;Top=662;Right=293;Bottom=820;" subject="EAID_41738ECC_68DF_477f_A141_163D116F50EA" seqno="5" style="DUID=1A321563;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;"/>
+					<element geometry="Left=393;Top=528;Right=549;Bottom=575;" subject="EAID_DD9EEB90_32F2_4879_8BA5_6ADB424E12AA" seqno="6" style="DUID=F4C34CC2;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;"/>
+					<element geometry="Left=651;Top=292;Right=806;Bottom=411;" subject="EAID_F2447631_14A8_486a_93E3_981D0B790699" seqno="7" style="NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=4F56B583;"/>
+					<element geometry="Left=365;Top=292;Right=520;Bottom=398;" subject="EAID_3C950D55_C68E_4e66_BEB9_21FEB04E4E11" seqno="8" style="NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=B5FA9FA1;"/>
+					<element geometry="Left=110;Top=292;Right=265;Bottom=398;" subject="EAID_77156DFF_FF99_479a_B975_0C7B2F185E4F" seqno="9" style="NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=3864469F;"/>
+					<element geometry="Left=363;Top=99;Right=518;Bottom=192;" subject="EAID_BCF632F4_71A0_48a3_89EA_11342F67ED37" seqno="10" style="NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=96DEE629;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=440:-242$440:-242$;" subject="EAID_A1C473EF_33EC_4a01_A47D_18CF1AC6098E" style="Mode=3;EOID=96DEE629;SOID=B5FA9FA1;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=777:-625$471:-625$;" subject="EAID_BA4DDCBF_EC62_472d_AF5C_9AB61E97A2C3" style="Mode=3;EOID=F4C34CC2;SOID=3280617B;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=577:-625$471:-625$;" subject="EAID_6CAAD5C6_7F2D_48be_99F5_CD7392956FA2" style="Mode=3;EOID=F4C34CC2;SOID=AA9C7547;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=395:-625$471:-625$;" subject="EAID_4C7DF469_9637_4251_B33C_4FE546EE4315" style="Mode=3;EOID=F4C34CC2;SOID=2A688551;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=238:-625$471:-625$;" subject="EAID_06C3A265_6E4C_437b_8DF1_FFA23C844FEF" style="Mode=3;EOID=F4C34CC2;SOID=1A321563;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=185:-242$440:-242$;" subject="EAID_E1CE7911_621A_4def_B52C_44C9CBC8B3A3" style="Mode=3;EOID=96DEE629;SOID=3864469F;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=726:-242$440:-242$;" subject="EAID_62A0D94C_7417_460f_B3B3_92D73DEDBCB4" style="Mode=3;EOID=96DEE629;SOID=4F56B583;Color=-1;LWidth=0;TREE=V;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
