@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" name="Casos de uso" visibility="public">
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_673EB66D_3F37_45bb_9D45_5370CA452F1B" name="Servicio REST" visibility="public"/>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_6DE04745_1DD8_4e89_9A23_56D7EAB5BB2D" name="Actores" visibility="public">
+				<packagedElement xmi:type="uml:Actor" xmi:id="EAID_EBBD37E9_DA66_4472_A737_44677905942D" name="Usuario" visibility="public"/>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_96F44C17_155A_4703_907A_0294FA8CA891" visibility="public">
+					<memberEnd xmi:idref="EAID_dstF44C17_155A_4703_907A_0294FA8CA891"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_dstF44C17_155A_4703_907A_0294FA8CA891" visibility="public" association="EAID_96F44C17_155A_4703_907A_0294FA8CA891" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+						<type xmi:idref="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112"/>
+					</ownedEnd>
+					<memberEnd xmi:idref="EAID_srcF44C17_155A_4703_907A_0294FA8CA891"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcF44C17_155A_4703_907A_0294FA8CA891" visibility="public" association="EAID_96F44C17_155A_4703_907A_0294FA8CA891" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+						<type xmi:idref="EAID_EBBD37E9_DA66_4472_A737_44677905942D"/>
+					</ownedEnd>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Association" xmi:id="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" visibility="public">
+					<memberEnd xmi:idref="EAID_dst703D47_310B_4d5a_BD18_2FB7B0D20F42"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_dst703D47_310B_4d5a_BD18_2FB7B0D20F42" visibility="public" association="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+						<type xmi:idref="EAID_562B7008_55A1_408b_A779_4809AD257485"/>
+					</ownedEnd>
+					<memberEnd xmi:idref="EAID_src703D47_310B_4d5a_BD18_2FB7B0D20F42"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src703D47_310B_4d5a_BD18_2FB7B0D20F42" visibility="public" association="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+						<type xmi:idref="EAID_EBBD37E9_DA66_4472_A737_44677905942D"/>
+					</ownedEnd>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" name="Casos de uso" visibility="public">
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E" name="CU1.2. Persiste árbol binario" visibility="public"/>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" name="CU2. Solicita ancestros comunes de dos nodos de un árbol binario" visibility="public">
+					<include xmi:type="uml:Include" xmi:id="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9" visibility="public" addition="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0"/>
+					<include xmi:type="uml:Include" xmi:id="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894" visibility="public" addition="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0" name="CU2.1. Consulta árbol binario y crea objeto" visibility="public"/>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD" name="CU2.2. Obtiene ancestros de los dos nodos" visibility="public">
+					<include xmi:type="uml:Include" xmi:id="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378" visibility="public" addition="EAID_E7BB5853_26DE_492b_8946_7A3377D54618"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_E7BB5853_26DE_492b_8946_7A3377D54618" name="CU2.2.1. Recorre árbol binario desde el nodo dado" visibility="public"/>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_562B7008_55A1_408b_A779_4809AD257485" name="CU1. Solicita crear árbol binario" visibility="public">
+					<include xmi:type="uml:Include" xmi:id="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6" visibility="public" addition="EAID_7874B790_E5B6_49a3_993A_598BAD18985B"/>
+					<include xmi:type="uml:Include" xmi:id="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1" visibility="public" addition="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:UseCase" xmi:id="EAID_7874B790_E5B6_49a3_993A_598BAD18985B" name="CU1.1. Convierte petición a objeto árbol" visibility="public"/>
+			</packagedElement>
+		</packagedElement>
+		<thecustomprofile:include base_Include="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9"/>
+		<thecustomprofile:include base_Include="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894"/>
+		<thecustomprofile:include base_Include="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378"/>
+		<thecustomprofile:include base_Include="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6"/>
+		<thecustomprofile:include base_Include="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" xmi:type="uml:Package" name="Casos de uso" scope="public">
+				<model package2="EAID_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" package="EAPK_03A36D1B_BFD1_4be1_A5BA_0874C829C3AE" tpos="1" ea_localid="2" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:30:14" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties version="1.0" tpos="1"/>
+				<paths/>
+				<times created="2020-07-24 14:22:28" modified="2020-07-24 14:30:14" lastloaddate="2016-07-21 08:07:37" lastsavedate="2016-07-21 08:07:37"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_673EB66D_3F37_45bb_9D45_5370CA452F1B" xmi:type="uml:Boundary" name="Servicio REST" scope="public">
+				<model package="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" tpos="0" ea_localid="2" ea_eleType="element"/>
+				<properties documentation="[Description of the System]" isSpecification="false" sType="Boundary" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:23:12" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=3;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+			</element>
+			<element xmi:idref="EAPK_6DE04745_1DD8_4e89_9A23_56D7EAB5BB2D" xmi:type="uml:Package" name="Actores" scope="public">
+				<model package2="EAID_6DE04745_1DD8_4e89_9A23_56D7EAB5BB2D" package="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" tpos="0" ea_localid="3" ea_eleType="package"/>
+				<properties documentation="Contains Actors that represent the roles that users play with respect to the system." isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:28:30" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2020-07-24 14:22:28" modified="2020-07-24 14:28:30" lastloaddate="2016-07-21 08:07:37" lastsavedate="2016-07-21 08:07:37"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_EBBD37E9_DA66_4472_A737_44677905942D" xmi:type="uml:Actor" name="Usuario" scope="public">
+				<model package="EAPK_6DE04745_1DD8_4e89_9A23_56D7EAB5BB2D" tpos="1" ea_localid="6" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Actor" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:22:49" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Actores"/>
+				<links>
+					<Association xmi:id="EAID_96F44C17_155A_4703_907A_0294FA8CA891" start="EAID_EBBD37E9_DA66_4472_A737_44677905942D" end="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112"/>
+					<Association xmi:id="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" start="EAID_EBBD37E9_DA66_4472_A737_44677905942D" end="EAID_562B7008_55A1_408b_A779_4809AD257485"/>
+				</links>
+			</element>
+			<element xmi:idref="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" xmi:type="uml:Package" name="Casos de uso" scope="public">
+				<model package2="EAID_23D041A1_19CA_4f60_85B6_AC5E0BF92571" package="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" tpos="0" ea_localid="4" ea_eleType="package"/>
+				<properties documentation="Contiene los casos de uso que representa el valor u objetivo que los actores desean obtener." isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:29:06" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2020-07-24 14:22:28" modified="2020-07-24 14:29:06" lastloaddate="2016-07-21 08:07:37" lastsavedate="2016-07-21 08:07:37"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E" xmi:type="uml:UseCase" name="CU1.2. Persiste árbol binario" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="0" ea_localid="9" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:24:11" modified="2020-07-24 14:29:37" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1" start="EAID_562B7008_55A1_408b_A779_4809AD257485" end="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" xmi:type="uml:UseCase" name="CU2. Solicita ancestros comunes de dos nodos de un árbol binario" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="0" ea_localid="10" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:25:12" modified="2020-07-24 14:30:59" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9" start="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" end="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0"/>
+					<UseCase xmi:id="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894" start="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" end="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD"/>
+					<Association xmi:id="EAID_96F44C17_155A_4703_907A_0294FA8CA891" start="EAID_EBBD37E9_DA66_4472_A737_44677905942D" end="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0" xmi:type="uml:UseCase" name="CU2.1. Consulta árbol binario y crea objeto" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="0" ea_localid="12" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:25:55" modified="2020-07-24 14:29:42" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9" start="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" end="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD" xmi:type="uml:UseCase" name="CU2.2. Obtiene ancestros de los dos nodos" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="0" ea_localid="13" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:26:17" modified="2020-07-24 14:29:46" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378" start="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD" end="EAID_E7BB5853_26DE_492b_8946_7A3377D54618"/>
+					<UseCase xmi:id="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894" start="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" end="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_E7BB5853_26DE_492b_8946_7A3377D54618" xmi:type="uml:UseCase" name="CU2.2.1. Recorre árbol binario desde el nodo dado" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="0" ea_localid="14" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:26:59" modified="2020-07-24 14:29:51" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378" start="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD" end="EAID_E7BB5853_26DE_492b_8946_7A3377D54618"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_562B7008_55A1_408b_A779_4809AD257485" xmi:type="uml:UseCase" name="CU1. Solicita crear árbol binario" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="1" ea_localid="7" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:29:20" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<constraints>
+					<constraint name="Invariant A" type="Invariant" weight="0,00" status="Approved"/>
+					<constraint name="Post-condition A" type="Post-condition" weight="2,00" status="Approved"/>
+					<constraint name="Pre-condition A" type="Pre-condition" weight="1,00" status="Approved"/>
+				</constraints>
+				<EAModel.scenario>
+					<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_562B7008_55A1_408b_A779_4809AD257485" xmi:id="EAID_F57139BE_042A_40ae_8D36_C5FD0EF4CFF8">
+						<EAScenarioContent>
+							<path>
+								<step name="User Step One" level="1" uses="" useslist="" result="" state="" trigger="1" guid="{2D611EE9-5DB0-4101-A49D-6517FB7A7C54}" link=""/>
+								<step name="System Step One" level="2" uses="" useslist="" result="" state="" trigger="0" guid="{8901DF45-2E6C-40de-A1C4-DF764841040E}" link=""/>
+								<step name="User Step Two" level="3" uses="" useslist="" result="" state="" trigger="1" guid="{8002B22D-4964-4322-AEA5-EBB7CAEB041D}" link=""/>
+								<step name="System Step Two" level="4" uses="" useslist="" result="" state="" trigger="0" guid="{EA727442-8613-4526-BA87-2DD45A960E87}" link=""/>
+								<context>
+									<item oldname="Actor A" guid="{B8C7AC60-5BBA-47aa-BC99-C65C02BE2E15}"/>
+								</context>
+							</path>
+						</EAScenarioContent>
+					</EAScenario>
+				</EAModel.scenario>
+				<links>
+					<UseCase xmi:id="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6" start="EAID_562B7008_55A1_408b_A779_4809AD257485" end="EAID_7874B790_E5B6_49a3_993A_598BAD18985B"/>
+					<UseCase xmi:id="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1" start="EAID_562B7008_55A1_408b_A779_4809AD257485" end="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E"/>
+					<Association xmi:id="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" start="EAID_EBBD37E9_DA66_4472_A737_44677905942D" end="EAID_562B7008_55A1_408b_A779_4809AD257485"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_7874B790_E5B6_49a3_993A_598BAD18985B" xmi:type="uml:UseCase" name="CU1.1. Convierte petición a objeto árbol" scope="public">
+				<model package="EAPK_23D041A1_19CA_4f60_85B6_AC5E0BF92571" tpos="4" ea_localid="8" ea_eleType="element"/>
+				<properties isSpecification="false" sType="UseCase" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="jomva" version="1.0" phase="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:29:33" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Casos de uso"/>
+				<links>
+					<UseCase xmi:id="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6" start="EAID_562B7008_55A1_408b_A779_4809AD257485" end="EAID_7874B790_E5B6_49a3_993A_598BAD18985B"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_96F44C17_155A_4703_907A_0294FA8CA891">
+				<source xmi:idref="EAID_EBBD37E9_DA66_4472_A737_44677905942D">
+					<model ea_localid="6" type="Actor" name="Usuario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112">
+					<model ea_localid="10" type="UseCase" name="CU2. Solicita ancestros comunes de dos nodos de un árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="5"/>
+				<properties ea_type="Association" direction="Unspecified"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42">
+				<source xmi:idref="EAID_EBBD37E9_DA66_4472_A737_44677905942D">
+					<model ea_localid="6" type="Actor" name="Usuario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_562B7008_55A1_408b_A779_4809AD257485">
+					<model ea_localid="7" type="UseCase" name="CU1. Solicita crear árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="1"/>
+				<properties ea_type="Association" direction="Unspecified"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1">
+				<source xmi:idref="EAID_562B7008_55A1_408b_A779_4809AD257485">
+					<model ea_localid="7" type="UseCase" name="CU1. Solicita crear árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E">
+					<model ea_localid="9" type="UseCase" name="CU1.2. Persiste árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="4"/>
+				<properties ea_type="UseCase" subtype="Includes" stereotype="include" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«include»"/>
+				<extendedProperties conditional=" &#xA;«include»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={624E6D4C-B82D-4f5b-A574-B13806F7990A}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;@ENDSTEREO;$DES;$CLT={36F6770D-393C-4210-8A11-646B3F7F1BD1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9">
+				<source xmi:idref="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112">
+					<model ea_localid="10" type="UseCase" name="CU2. Solicita ancestros comunes de dos nodos de un árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0">
+					<model ea_localid="12" type="UseCase" name="CU2.1. Consulta árbol binario y crea objeto"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="7"/>
+				<properties ea_type="UseCase" subtype="Includes" stereotype="include" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«include»"/>
+				<extendedProperties conditional=" &#xA;«include»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={8D7F9631-640D-4227-BF8C-9B785A1A6CF4}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;@ENDSTEREO;$DES;$CLT={80B23CC3-D803-4d75-A6B4-6D95FF9735A9}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894">
+				<source xmi:idref="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112">
+					<model ea_localid="10" type="UseCase" name="CU2. Solicita ancestros comunes de dos nodos de un árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD">
+					<model ea_localid="13" type="UseCase" name="CU2.2. Obtiene ancestros de los dos nodos"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="8"/>
+				<properties ea_type="UseCase" subtype="Includes" stereotype="include" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«include»"/>
+				<extendedProperties conditional=" &#xA;«include»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={94AE0551-9BEA-464a-977F-561267160730}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;@ENDSTEREO;$DES;$CLT={ECA4E9A8-AB5A-40b9-9ABF-78DBD9FEE894}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378">
+				<source xmi:idref="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD">
+					<model ea_localid="13" type="UseCase" name="CU2.2. Obtiene ancestros de los dos nodos"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_E7BB5853_26DE_492b_8946_7A3377D54618">
+					<model ea_localid="14" type="UseCase" name="CU2.2.1. Recorre árbol binario desde el nodo dado"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="9"/>
+				<properties ea_type="UseCase" subtype="Includes" stereotype="include" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«include»"/>
+				<extendedProperties conditional=" &#xA;«include»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={CE21564E-0A3A-439c-A178-502B4FF47822}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;@ENDSTEREO;$DES;$CLT={76A21FCD-5255-4e7d-B9BC-2918C5D6F378}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6">
+				<source xmi:idref="EAID_562B7008_55A1_408b_A779_4809AD257485">
+					<model ea_localid="7" type="UseCase" name="CU1. Solicita crear árbol binario"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7874B790_E5B6_49a3_993A_598BAD18985B">
+					<model ea_localid="8" type="UseCase" name="CU1.1. Convierte petición a objeto árbol"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3"/>
+				<properties ea_type="UseCase" subtype="Includes" stereotype="include" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«include»"/>
+				<extendedProperties conditional=" &#xA;«include»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={E9526DC8-16BF-4200-845E-65E642B39C00}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={A73922C9-6295-4f16-9C75-FCFE8D9E89DC};@ENDSTEREO;$DES;$CLT={0612C92B-1E80-450e-9AA6-E4DA79F44FB6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="include" name="include">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="include-base_Include" name="base_Include" association="Include_include">
+						<type href="http://schema.omg.org/spec/UML/2.1/Include"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Include_include" name="A_Include_include" memberEnd="extension_include include-base_Include">
+					<ownedEnd xmi:id="extension_include" name="extension_include" type="include" isComposite="true" lower="0" upper="1" memberEnd="extension_include include-base_Include"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+		<diagrams>
+			<diagram xmi:id="EAID_41928E82_2614_4f64_A01F_752015F9663A">
+				<model package="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4" localID="1" owner="EAPK_51355585_620D_4fe9_90AE_9EFC7B1F0DE4"/>
+				<properties name="Diagrama de Casos de uso" type="Use Case"/>
+				<project author="jomva" version="1.0" created="2020-07-24 14:22:28" modified="2020-07-24 14:30:07"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=B9A045EE;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=534;Top=392;Right=639;Bottom=462;" subject="EAID_E7BB5853_26DE_492b_8946_7A3377D54618" seqno="1" style="DUID=45E39552;"/>
+					<element geometry="Left=376;Top=409;Right=481;Bottom=479;" subject="EAID_8E215EB4_FF42_4622_8408_607097BE0BFD" seqno="2" style="DUID=49894D1E;"/>
+					<element geometry="Left=396;Top=321;Right=501;Bottom=391;" subject="EAID_F81D0A56_842D_46da_A7F1_26B0F0A958C0" seqno="3" style="DUID=C0078E1B;"/>
+					<element geometry="Left=229;Top=339;Right=334;Bottom=409;" subject="EAID_EF8C36D7_B947_4fe6_9A15_78FAABA1D112" seqno="4" style="DUID=0192974A;"/>
+					<element geometry="Left=396;Top=233;Right=501;Bottom=303;" subject="EAID_17CDEDF2_32E3_4d9e_8B19_A866A4DFAD2E" seqno="5" style="DUID=04B1279B;"/>
+					<element geometry="Left=405;Top=134;Right=510;Bottom=204;" subject="EAID_7874B790_E5B6_49a3_993A_598BAD18985B" seqno="6" style="DUID=11609D89;"/>
+					<element geometry="Left=223;Top=174;Right=328;Bottom=244;" subject="EAID_562B7008_55A1_408b_A779_4809AD257485" seqno="7" style="DUID=2B3567AA;"/>
+					<element geometry="Left=100;Top=153;Right=147;Bottom=248;" subject="EAID_EBBD37E9_DA66_4472_A737_44677905942D" seqno="8" style="DUID=423B5D25;"/>
+					<element geometry="Left=197;Top=112;Right=648;Bottom=495;" subject="EAID_673EB66D_3F37_45bb_9D45_5370CA452F1B" seqno="9" style="NSL=0;DUID=D4F85867;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=39:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_76A21FCD_5255_4e7d_B9BC_2918C5D6F378" style="Mode=3;EOID=45E39552;SOID=49894D1E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=39:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_ECA4E9A8_AB5A_40b9_9ABF_78DBD9FEE894" style="Mode=3;EOID=49894D1E;SOID=0192974A;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=39:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_80B23CC3_D803_4d75_A6B4_6D95FF9735A9" style="Mode=3;EOID=C0078E1B;SOID=0192974A;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_96F44C17_155A_4703_907A_0294FA8CA891" style="Mode=3;EOID=0192974A;SOID=423B5D25;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=39:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_36F6770D_393C_4210_8A11_646B3F7F1BD1" style="Mode=3;EOID=04B1279B;SOID=2B3567AA;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=39:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0612C92B_1E80_450e_9AA6_E4DA79F44FB6" style="Mode=3;EOID=11609D89;SOID=2B3567AA;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E4703D47_310B_4d5a_BD18_2FB7B0D20F42" style="Mode=3;EOID=2B3567AA;SOID=423B5D25;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
