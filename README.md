@@ -5,7 +5,7 @@ Repositorio para el desarrollo de la prueba
 
 ## Proyecto
 Se debe realizar un servicio REST que permite crear árboles binarios y consultar los ancestros de un árbol dado.
-La información técnica se encuentra en el siguiete [documento](prueba técnica c++.pdf).
+La información técnica se encuentra en el siguiete [documento](prueba_tecnica_cpp.pdf).
 
 ## Carpetas
 Se usan las siguientes carpetas para los usos señalados más abajo:
