@@ -26,4 +26,6 @@ Se proponen las siguientes ramas para el manejo del proyecto
 
 ## Documentación
 
-Se tiene el modela hecho de acuerdo a UML. Para ello se guardan en archivos XML para facilitar el versionamiento. Sin embargo se usará la siguiente carpeta dr [drive](https://drive.google.com/drive/folders/1Nn47Xoq1NjK3ruurDJm0apEtBZ9_Y2KP?usp=sharing) para subir los archivos de Enterprise Architect.
+* Se tiene el modela hecho de acuerdo a UML. Para ello se guardan en archivos XML para facilitar el versionamiento. Sin embargo se usará la siguiente carpeta de [drive](https://drive.google.com/drive/folders/1Nn47Xoq1NjK3ruurDJm0apEtBZ9_Y2KP?usp=sharing) para subir los archivos de Enterprise Architect.
+* Para la gestión de tareas y actividades se usa el siguiente [tablero](https://trello.com/b/imyAlWAY/prueba-t%C3%A9cnica) en [trello](https://trello.com/es).
+
