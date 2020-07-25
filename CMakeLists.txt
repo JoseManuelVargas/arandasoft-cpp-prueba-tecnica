@@ -7,5 +7,6 @@ project(prueba-tecnica)
 enable_testing()
 
 add_subdirectory(googletest)
+add_subdirectory(soci)
 
 
