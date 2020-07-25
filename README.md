@@ -35,3 +35,12 @@ Se proponen las siguientes ramas para el manejo del proyecto
 * El código y comentarios se desarrollará en español.
 * Una excepción para no usar español es el encabezado de licencia, dependiendo de cuál se adopte.
 
+## Módulos
+El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpeta con su propio archivo CMakeLists.txt. Algunos módulos son librerias, frameworks y/ SDK de terceros. Estos últimos son incorporados al proyecto como submódulos. Los módulos son los siguientes:
+
+* googletest: Para poder haces pruebas unitarias. Se toma del [repositorio](https://github.com/google/googletest)
+* json: Para el manejo de objetos tipo json, necesario para el manejo de peticiones y respuestas. Se toma del siguiente [repositorio](https://github.com/nlohmann/json)
+* soci: ORM para bases de datos para lenguaje de programación C++. En este caso se integra con SQLite como gestor de base de datos. Se toma del [repositorio](https://github.com/SOCI/soci)
+
+
+

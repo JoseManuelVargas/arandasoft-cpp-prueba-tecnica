@@ -4,3 +4,6 @@
 [submodule "soci"]
 	path = soci
 	url = https://github.com/SOCI/soci.git
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json.git
