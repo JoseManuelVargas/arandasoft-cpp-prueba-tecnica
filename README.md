@@ -31,7 +31,7 @@ Se proponen las siguientes ramas para el manejo del proyecto
 * Para visualizar la descripción de los endpoints se debe abrir el [archivo](docs/ENDPOINTS/swagger.yaml) y pegar el contenido en el editor de [swagger](https://editor.swagger.io/).
 
 ## Estilo del código
-* Se adopta el estilo de código para C++ recomendado por google en el [documento](https://google.github.io/styleguide/cppguide.html#Naming).
+* Se adopta el estilo de código para C++ recomendado por google en el [documento](https://google.github.io/styleguide/cppguide.html).
 * El código y comentarios se desarrollará en español.
 * Una excepción para no usar español es el encabezado de licencia, dependiendo de cuál se adopte.
 
