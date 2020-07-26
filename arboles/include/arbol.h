@@ -89,7 +89,7 @@ namespace arboles {
 		std::unique_ptr<Nodo<T>> raiz;
 	private:
 		// Almacena el valor del id para la base de datos. Valor por defecto -1
-		int id;
+		long id;
 		// Almacena el nombre asignado en la creación
 		std::string nombre;
 	};

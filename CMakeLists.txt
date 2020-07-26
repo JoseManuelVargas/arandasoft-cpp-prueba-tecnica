@@ -11,5 +11,6 @@ add_subdirectory(soci)
 add_subdirectory(json)
 
 add_subdirectory(arboles)
+add_subdirectory(basedatos)
 
 
