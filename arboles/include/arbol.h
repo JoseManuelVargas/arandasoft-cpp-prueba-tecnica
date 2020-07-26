@@ -121,7 +121,7 @@ namespace arboles {
 	template<typename T>
 	bool Arbol<T>::EstaVacio()
 	{
-		return false;
+		return true;
 	}
 }
 

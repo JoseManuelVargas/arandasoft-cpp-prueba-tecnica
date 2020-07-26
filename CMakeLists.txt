@@ -10,4 +10,6 @@ add_subdirectory(googletest)
 add_subdirectory(soci)
 add_subdirectory(json)
 
+add_subdirectory(arboles)
+
 

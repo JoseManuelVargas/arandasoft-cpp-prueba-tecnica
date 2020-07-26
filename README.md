@@ -44,6 +44,8 @@ El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpet
 * googletest: Para poder haces pruebas unitarias. Se toma del [repositorio](https://github.com/google/googletest)
 * json: Para el manejo de objetos tipo json, necesario para el manejo de peticiones y respuestas. Se toma del siguiente [repositorio](https://github.com/nlohmann/json)
 * soci: ORM para bases de datos para lenguaje de programación C++. En este caso se integra con SQLite como gestor de base de datos. Se toma del [repositorio](https://github.com/SOCI/soci)
+* arboles: Define las clases e implementa la lógica para el manejo de árboles binarios.
+
 
 
 

@@ -8,6 +8,7 @@ enable_testing()
 
 add_subdirectory(test)
 
-add_library(${PROJECT_NAME} src/arboles.cpp)
+add_library(${PROJECT_NAME} src/null.cpp)
+
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
