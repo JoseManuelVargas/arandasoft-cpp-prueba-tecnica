@@ -34,9 +34,12 @@ Se proponen las siguientes ramas para el manejo del proyecto
 * Se adopta el estilo de código para C++ recomendado por google en el [documento](https://google.github.io/styleguide/cppguide.html).
 * El código y comentarios se desarrollará en español.
 * Una excepción para no usar español es el encabezado de licencia, dependiendo de cuál se adopte.
+* Se cambia las guarda de los archivos .h por la línea #pragma once.
+* Se crea archivo de plantilla para usarlos como guía
+* Se usarán clases para definiciones que requieran jerarquía y herencia, mientras que se usarán structs para definiciones que solo requieran encapsulamiento. Aplican excepciones.
 
 ## Módulos
-El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpeta con su propio archivo CMakeLists.txt. Algunos módulos son librerias, frameworks y/ SDK de terceros. Estos últimos son incorporados al proyecto como submódulos. Los módulos son los siguientes:
+El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpeta con su propio archivo CMakeLists.txt. Todos los módulos deben definir su propio namespace. Algunos módulos son librerias, frameworks y/ SDK de terceros. Estos últimos son incorporados al proyecto como submódulos. Los módulos son los siguientes:
 
 * googletest: Para poder haces pruebas unitarias. Se toma del [repositorio](https://github.com/google/googletest)
 * json: Para el manejo de objetos tipo json, necesario para el manejo de peticiones y respuestas. Se toma del siguiente [repositorio](https://github.com/nlohmann/json)
