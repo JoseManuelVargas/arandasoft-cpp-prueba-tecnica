@@ -35,6 +35,7 @@ SOFTWARE.
 bool basedatos::ConexionBD::estan_creadas_tablas = false;
 
 basedatos::ConexionBD::ConexionBD(const std::string& archivo)
+	: sesion_sql(*soci::factory_sqlite3(), archivo)
 {
 }
 
@@ -45,13 +46,39 @@ soci::session& basedatos::ConexionBD::ObtenerSession()
 
 void basedatos::ConexionBD::CrearTablas()
 {
+	if (estan_creadas_tablas)
+		return;
+	estan_creadas_tablas = true;
+	CrearTablaArbolesBinarios();
+	CrearTablaNodosBinarios();
 }
 
 void basedatos::ConexionBD::CrearTablaArbolesBinarios()
 {
+	try {
+		sql << " CREATE TABLE ArbolBinario ( "
+			"id BIGINT NOT NULL PRIMARY KEY, "
+			"creacion TEXT, "
+			"nombre TEXT "
+			");";
+	}
+	catch (soci::soci_error const & error) {
+		std::cerr << "Error creando tabla de arboles binario: " << error.what() << std::endl;
+	}
 }
 
 void basedatos::ConexionBD::CrearTablaNodosBinarios()
 {
+	try {
+		sql << " CREATE TABLE Nodo ( "
+			"arbol_id BIGINT NOT NULL, "
+			"valor INTEGER, "
+			"FOREIGN KEY(arbol_id) REFERENCES ArbolBinario(id) "
+			"); "
+			"CREATE INDEX nodo_arbol_id_index ON Nodo(arbol_id);";
+	}
+	catch (soci::soci_error const & error) {
+		std::cerr << "Error creando tabla de nodos binarios: " << error.what() << std::endl;
+	}
 }
 

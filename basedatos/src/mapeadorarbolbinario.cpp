@@ -32,6 +32,27 @@ SOFTWARE.
 
 #include "mapeadorarbolbinario.h"
 
+#include <string>
+#include <ctime>
+#include <chrono>
+
+// TODO: Pasar códigos a librería de utilidades
+namespace fechas {
+
+std::string ConvertirFechaActualAString() {
+	std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+	return convertTmDateTimeToStr(std::localtime(&now_time));
+}
+
+std::string ConvertirFechaTMaString(struct std::tm * datetime) {
+	char buffer [80];
+	strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", datetime);
+	string datetime_str(buffer);
+	return datetime_str;
+
+}
+}
+
 basedatos::MapeadorArbolBinario::MapeadorArbolBinario(ConexionBD& con)
 	: conexion(con), sesion_sql(con.ObtenerSession())
 {
@@ -39,11 +60,27 @@ basedatos::MapeadorArbolBinario::MapeadorArbolBinario(ConexionBD& con)
 
 std::unique_ptr<arboles::ArbolBinario<int>> basedatos::MapeadorArbolBinario::ConsultarArbolPorID(long id)
 {
-	return std::unique_ptr<arboles::ArbolBinario<int>>(nullptr);
+	soci::row fila = (sesion_sql.prepare << "SELECT nombre FROM ArbolBinario WHERE id = " << id);
+	arboles::ArbolBinario<int> * arbol = new arboles::ArbolBinario<int>(file.get<std::string>(0), id);
+	soci::rowset<soci::row> conjunto_filas = (sesion_sql.prepare << "SELECT valor FROM Nodo WHERE arbol_id = " << id);
+	for (soci::row const & f : conjunto_filas)
+		arbol->Agregar(f.get<int>(0));
+	return std::unique_ptr<arboles::ArbolBinario<int>>(arbol);
 }
 
 long basedatos::MapeadorArbolBinario::GuardarArbol(const std::string& nombre, std::vector<int>& valores)
 {
-	return 0;
+	long ultimo_id = 1;
+	sesion_sql << "INSERT INTO ArbolBinario (id, creacion, nombre) "
+		"VALUES (:id, :crea, :nomb);",
+		use(ultimo_id, "id"),
+		use(fechas::ConvertirFechaActualAString(), "crea"),
+		use(nombre, "nomb");
+	for (auto& valor: valores)
+		sesion_sql << "INSERT INTO Nodo (arbol_id, valor) "
+			"VALUES (:arbol, :valor);",
+			use(ultimo_id, "arbol"),
+			use(valor, "valor");
+	return ultimo_id;
 }
 
