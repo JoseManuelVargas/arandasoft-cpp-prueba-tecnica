@@ -18,6 +18,7 @@ find_package(cpprestsdk REQUIRED)
 add_subdirectory(googletest)
 add_subdirectory(soci)
 # add_subdirectory(json)
+add_subdirectory(servicio)
 
 add_subdirectory(arboles)
 add_subdirectory(basedatos)
