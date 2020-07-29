@@ -24,3 +24,6 @@ add_subdirectory(arboles)
 add_subdirectory(basedatos)
 add_subdirectory(servicio)
 
+add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} servicio)
+

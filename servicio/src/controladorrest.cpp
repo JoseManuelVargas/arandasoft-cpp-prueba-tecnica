@@ -35,6 +35,7 @@ SOFTWARE.
 void servicio::ControladorREST::ProcesarPeticionPOST(web::http::http_request mensaje)
 {
 	using namespace web;
+	ucout << mensaje.to_string() << std::endl;
 	json::value mensaje_error;
 	try
 	{
@@ -78,6 +79,7 @@ void servicio::ControladorREST::ProcesarPeticionPOST(web::http::http_request men
 
 void servicio::ControladorREST::ProcesarPeticionGET(web::http::http_request mensaje)
 {
+	ucout << mensaje.to_string() << std::endl;
 	web::json::value mensaje_error;
 	web::json::value texto_error(U("No se soporta el método HTTP"), false);
 	mensaje_error[U("mensaje")] = texto_error;

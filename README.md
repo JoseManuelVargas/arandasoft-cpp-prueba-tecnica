@@ -52,4 +52,8 @@ El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpet
 * basedatos: Define las clases necesarias para conectar una base de datos SQLite usando SOCI. También define los mapeados necesarios para consultar y almacenar los objetos.
 * servicio: Define el cliente y servidor REST. El servidor se encargará de exponer el API REST, mientras que el cliente se usa para realizar pruebas unitarias al servicio. Define el controlador y las clases del servicio, para validar errores en las solicitudes y responder con el mensaje adecuado.
 
+## Pruebas
+Cada módulo cuenta con su conjunto de pruebas unitarias.
+Adicionalmente se crea un código en python que realiza pruebas unitarias de manera externa, ubicado en www/pruebs.py Para ejecutarlo se debe correr la aplicación y  luego ejecutarla usando python3 www/pruebas.py
+
 
