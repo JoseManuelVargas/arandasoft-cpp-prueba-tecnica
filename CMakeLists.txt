@@ -18,8 +18,9 @@ find_package(cpprestsdk REQUIRED)
 add_subdirectory(googletest)
 add_subdirectory(soci)
 # add_subdirectory(json)
-add_subdirectory(servicio)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/soci/include)
 
 add_subdirectory(arboles)
 add_subdirectory(basedatos)
+add_subdirectory(servicio)
 

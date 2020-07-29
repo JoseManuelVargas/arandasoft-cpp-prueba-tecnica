@@ -33,6 +33,7 @@ SOFTWARE.
 #include <vector>
 
 #include "servicioarboles.h"
+#include "mapeadorarbolbinario.h"
 
 using namespace web;
 
@@ -56,8 +57,11 @@ void servicio::ServicioArboles::CrearArbolBinario(web::http::http_request& mensa
 	valores.reserve(valores_json.size());
 	for (auto& valor : valores_json)
 		valores.push_back(valor.as_integer());
+	basedatos::ConexionBD conexion;
+	basedatos::MapeadorArbolBinario mapeador(conexion);
+	long arbol_id = mapeador.GuardarArbol(nombre, valores);
 	json::value mensaje_respuesta;
-	mensaje_respuesta[U("id")] = 2;
+	mensaje_respuesta[U("id")] = arbol_id;
 	json::value texto_nombre(wnombre, false);
 	mensaje_respuesta[U("nombre")] = texto_nombre;
 	mensaje.reply(http::status_codes::OK, mensaje_respuesta);
@@ -77,8 +81,28 @@ void servicio::ServicioArboles::CalcularAncestroComun(web::http::http_request& m
 	int id_arbol = datos[U("id")].as_integer();
 	int nodo1 = datos[U("nodo1")].as_integer();
 	int nodo2 = datos[U("nodo2")].as_integer();
+	basedatos::ConexionBD conexion;
+        basedatos::MapeadorArbolBinario mapeador(conexion);
+	std::unique_ptr<arboles::ArbolBinario<int>> arbol = mapeador.ConsultarArbolPorID(id_arbol);
+	if (arbol == nullptr) {
+		web::json::value mensaje_error;
+		json::value texto(U("No se encontró árbol en la base de datos con el ID especificado."), false);
+		mensaje_error[U("mensaje")] = texto;
+		mensaje_error[U("error")] = 34;
+		mensaje.reply(web::http::status_codes::BadRequest, mensaje_error);
+		return;
+	}
+	if (arbol->EstaVacio()) {
+		web::json::value mensaje_error;
+                json::value texto(U("El árbol está vacío. No se puede calcular ancestros."), false);
+                mensaje_error[U("mensaje")] = texto;
+                mensaje_error[U("error")] = 35;
+                mensaje.reply(web::http::status_codes::BadRequest, mensaje_error);
+                return;
+        }
+	int ancestro = arbol->CalcularAncestroComun(nodo1, nodo2);
 	json::value mensaje_respuesta;
-	mensaje_respuesta[U("ancestro")] = 2;
+	mensaje_respuesta[U("ancestro")] = ancestro;
 	mensaje.reply(http::status_codes::OK, mensaje_respuesta);
 }
 

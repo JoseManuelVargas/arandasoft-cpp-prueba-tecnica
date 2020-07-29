@@ -30,6 +30,10 @@ SOFTWARE.
  *
  */
 
+#include <iostream>
+
+#include <soci/sqlite3/soci-sqlite3.h>
+
 #include "conexionbd.h"
 
 bool basedatos::ConexionBD::estan_creadas_tablas = false;
@@ -37,11 +41,12 @@ bool basedatos::ConexionBD::estan_creadas_tablas = false;
 basedatos::ConexionBD::ConexionBD(const std::string& archivo)
 	: sesion_sql(*soci::factory_sqlite3(), archivo)
 {
+	CrearTablas();
 }
 
 soci::session& basedatos::ConexionBD::ObtenerSession()
 {
-    return sesesion_sql;
+    return sesion_sql;
 }
 
 void basedatos::ConexionBD::CrearTablas()
@@ -56,8 +61,8 @@ void basedatos::ConexionBD::CrearTablas()
 void basedatos::ConexionBD::CrearTablaArbolesBinarios()
 {
 	try {
-		sql << " CREATE TABLE ArbolBinario ( "
-			"id BIGINT NOT NULL PRIMARY KEY, "
+		sesion_sql << " CREATE TABLE arbolbinario ( "
+			"id INTEGER PRIMARY KEY AUTOINCREMENT, "
 			"creacion TEXT, "
 			"nombre TEXT "
 			");";
@@ -70,12 +75,12 @@ void basedatos::ConexionBD::CrearTablaArbolesBinarios()
 void basedatos::ConexionBD::CrearTablaNodosBinarios()
 {
 	try {
-		sql << " CREATE TABLE Nodo ( "
+		sesion_sql << " CREATE TABLE nodo ( "
 			"arbol_id BIGINT NOT NULL, "
 			"valor INTEGER, "
-			"FOREIGN KEY(arbol_id) REFERENCES ArbolBinario(id) "
+			"FOREIGN KEY(arbol_id) REFERENCES arbolbinario(id) "
 			"); "
-			"CREATE INDEX nodo_arbol_id_index ON Nodo(arbol_id);";
+			"CREATE INDEX nodo_arbol_id_index ON nodo(arbol_id);";
 	}
 	catch (soci::soci_error const & error) {
 		std::cerr << "Error creando tabla de nodos binarios: " << error.what() << std::endl;

@@ -49,17 +49,7 @@ TEST(BaseDeDatos, PruebaConexion)
     bool valor_good_real = archivo.good();
     archivo.close();
     EXPECT_EQ(valor_good_real, valor_good_esperado);
-    if (valor_good_real)
-        std::remove(nombre_archivo.c_str());
-}
-
-TEST(BaseDatos, MapeoArbolBinario)
-{
-    std::string nombre_archivo("bd_pruebas.db");
-    basedatos::ConexionBD conexion(nombre_archivo);
-    std::ifstream archivo(nombre_archivo);
-    bool valor_good_real = archivo.good();
-    archivo.close();
+    // Segunda prueba
     std::string nombre_arbol("Arbol prueba");
     std::vector<int> valores({ 4, 7, 2, 9, 10, 1, 14 });
     basedatos::MapeadorArbolBinario mapeador(conexion);

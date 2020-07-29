@@ -76,7 +76,7 @@ namespace basedatos {
 		long GuardarArbol(const std::string& nombre, std::vector<int>& valores);
 	private:
 		// Almacena la sesión SOCI
-		soci::session sesion_sql;
+		soci::session& sesion_sql;
 		// Referencia a una conexión de base de datos
 		ConexionBD& conexion;
 	};
