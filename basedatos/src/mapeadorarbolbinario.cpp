@@ -30,28 +30,13 @@ SOFTWARE.
  *
  */
 
+#include "fechas.h"
 #include "mapeadorarbolbinario.h"
 
 #include <string>
 #include <ctime>
 #include <chrono>
 
-// TODO: Pasar códigos a librería de utilidades
-namespace fechas {
-
-std::string ConvertirFechaActualAString() {
-	std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	return convertTmDateTimeToStr(std::localtime(&now_time));
-}
-
-std::string ConvertirFechaTMaString(struct std::tm * datetime) {
-	char buffer [80];
-	strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", datetime);
-	string datetime_str(buffer);
-	return datetime_str;
-
-}
-}
 
 basedatos::MapeadorArbolBinario::MapeadorArbolBinario(ConexionBD& con)
 	: conexion(con), sesion_sql(con.ObtenerSession())

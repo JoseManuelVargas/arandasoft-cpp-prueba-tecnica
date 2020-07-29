@@ -8,7 +8,7 @@ enable_testing()
 
 add_subdirectory(test)
 
-add_library(${PROJECT_NAME} src/conexionbd.cpp src/mapeadorarbolbinario.cpp)
+add_library(${PROJECT_NAME} src/conexionbd.cpp src/mapeadorarbolbinario.cpp src/fechas.cpp)
 
 
 target_link_libraries(${PROJECT_NAME} soci_core soci_sqlite3 arboles)
