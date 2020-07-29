@@ -37,6 +37,7 @@ SOFTWARE.
 #include "conexionbd.h"
 
 bool basedatos::ConexionBD::estan_creadas_tablas = false;
+const std::string basedatos::ConexionBD::kArchivoPorDefecto("arboles.db");
 
 basedatos::ConexionBD::ConexionBD(const std::string& archivo)
 	: sesion_sql(*soci::factory_sqlite3(), archivo)

@@ -51,12 +51,14 @@ namespace basedatos {
 		 * @brief Constructor para crear el archivo sqlite si no existe
 		 * @param archivo: Nombre del archivo que será creado para SQLite
 		 */
-		ConexionBD(const std::string& archivo = "arboles.db");
+		ConexionBD(const std::string& archivo = kArchivoPorDefecto);
 		/**
 		 * @brief Retorna una copia de la sesión de SOCI creada
 		 * @return session&: La sesión SOCI
 		 */
 		soci::session& ObtenerSession();
+		// Nombre del archivo sqlite por defecto
+		const static std::string kArchivoPorDefecto;
 	private:
 		// Almacena la sesión SOCI
 		soci::session sesion_sql;

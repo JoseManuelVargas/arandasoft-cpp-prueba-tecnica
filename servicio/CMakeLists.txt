@@ -6,7 +6,7 @@ project(servicio)
 
 enable_testing()
 
-# add_subdirectory(test)
+add_subdirectory(test)
 
 add_library(${PROJECT_NAME} src/clienterest.cpp src/controladorrest.cpp src/servicioarboles.cpp src/servidorrest.cpp src/utilidadesservicio.cpp)
 
