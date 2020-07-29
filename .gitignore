@@ -34,6 +34,7 @@
 # Custom
 build/
 build_*/
+*.dat
 
 # Python ignores
 # Byte-compiled / optimized / DLL files
