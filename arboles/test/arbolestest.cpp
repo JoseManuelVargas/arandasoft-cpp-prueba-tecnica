@@ -62,9 +62,10 @@ TEST(ArbolTest, ValidarHoja)
     bool respuesta_hoja = true;
     EXPECT_EQ(raiz.EsHoja(), respuesta_hoja);
     raiz.Agregar(4);
+    respuesta_hoja = false;
     EXPECT_EQ(raiz.EsHoja(), respuesta_hoja);
     raiz.Agregar(7);
-    EXPECT_NE(raiz.EsHoja(), respuesta_hoja);
+    EXPECT_EQ(raiz.EsHoja(), respuesta_hoja);
 }
 
 TEST(ArbolTest, ValidarArbolVacio)
@@ -86,7 +87,7 @@ TEST(ArbolTest, CaminoANodo1)
     std::vector<int> camino;
     raiz.CalcularCaminoANodo(5, camino);
     bool es_vacio = false;
-    size_t camino_tamanio = 5;
+    size_t camino_tamanio = 3;
     EXPECT_EQ(camino.empty(), es_vacio);
     EXPECT_EQ(camino.size(), camino_tamanio);
 }
@@ -102,7 +103,7 @@ TEST(ArbolTest, AncestroComun1)
     EXPECT_EQ(arbol.EstaVacio(), respuesta_vacio);
     if (!arbol.EstaVacio()) {
     	int ancestro = arbol.CalcularAncestroComun(5, 4);
-    	int ancestro_esperado = 5;
+    	int ancestro_esperado = 3;
     	EXPECT_EQ(ancestro, ancestro_esperado);
     }
 }

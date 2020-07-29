@@ -34,6 +34,7 @@ SOFTWARE.
 
 #include <list>
 #include <memory>
+#include <queue>
 
 #include "nodo.h"
 
@@ -92,17 +93,27 @@ namespace arboles {
 	template<typename T>
 	void NodoBinario<T>::Agregar(const T& dato)
 	{
-		if (dato < this->ObtenerValor()) {
-			if (nodo_izq == nullptr)
-				nodo_izq = std::make_unique<NodoBinario<T>>(dato);
+		std::queue<NodoBinario<T>*> cola;
+		cola.push(this);
+
+		while (!cola.empty())
+		{
+			NodoBinario<T>* nodo = cola.front();
+			cola.pop();
+
+			if (nodo->nodo_izq == nullptr) {
+				nodo->nodo_izq = std::make_unique<NodoBinario<T>>(dato);
+				break;
+			}
 			else
-				nodo_izq->Agregar(dato);
-		}
-		else if (dato > this->ObtenerValor()){
-			if (nodo_der == nullptr)
-				nodo_der = std::make_unique<NodoBinario<T>>(dato);
-			else
-				nodo_der->Agregar(dato);
+				cola.push(static_cast<NodoBinario<T>*>(nodo->nodo_izq.get()));
+
+			if (nodo->nodo_der == nullptr) {
+                                nodo->nodo_der = std::make_unique<NodoBinario<T>>(dato);
+                                break;
+                        }
+                        else
+                                cola.push(static_cast<NodoBinario<T>*>(nodo->nodo_der.get()));
 		}
 	}
 
