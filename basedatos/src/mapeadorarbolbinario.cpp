@@ -63,11 +63,11 @@ std::unique_ptr<arboles::ArbolBinario<int>> basedatos::MapeadorArbolBinario::Con
 {
 	std::string nombre;
 	sesion_sql << "SELECT nombre FROM arbolbinario WHERE id = " << id, soci::into(nombre);
-	arboles::ArbolBinario<int> * arbol = new arboles::ArbolBinario<int>(nombre, id);
+	std::unique_ptr<arboles::ArbolBinario<int>> arbol = std::make_unique<arboles::ArbolBinario<int>>(nombre, id);
 	soci::rowset<soci::row> conjunto_filas = (sesion_sql.prepare << "SELECT valor FROM nodo WHERE arbol_id = " << id);
 	for (soci::row const & f : conjunto_filas)
 		arbol->Agregar(f.get<int>(0));
-	return std::unique_ptr<arboles::ArbolBinario<int>>(arbol);
+	return std::move(arbol);
 }
 
 long basedatos::MapeadorArbolBinario::GuardarArbol(const std::string& nombre, std::vector<int>& valores)

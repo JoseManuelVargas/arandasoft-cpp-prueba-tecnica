@@ -50,6 +50,6 @@ El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpet
 * soci: ORM para bases de datos para lenguaje de programación C++. En este caso se integra con SQLite como gestor de base de datos. Se toma del [repositorio](https://github.com/SOCI/soci)
 * arboles: Define las clases e implementa la lógica para el manejo de árboles binarios.
 * basedatos: Define las clases necesarias para conectar una base de datos SQLite usando SOCI. También define los mapeados necesarios para consultar y almacenar los objetos.
-
+* servicio: Define el cliente y servidor REST. El servidor se encargará de exponer el API REST, mientras que el cliente se usa para realizar pruebas unitarias al servicio. Define el controlador y las clases del servicio, para validar errores en las solicitudes y responder con el mensaje adecuado.
 
 
