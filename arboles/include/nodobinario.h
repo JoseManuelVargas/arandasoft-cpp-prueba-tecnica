@@ -60,7 +60,7 @@ namespace arboles {
 		 * @param dato: Dato usado para asignar al nodo
 		 * @return void
 		 */
-		void Agreagar(const T& dato) override;
+		void Agregar(const T& dato) override;
 		/**
 		 * @brief Responde verdadero si el nodo es una hoja, es decir no tiene nodos hijos.
 		 *	Falso en caso contrario.
@@ -75,7 +75,7 @@ namespace arboles {
 		 * @param camino: Lista que almacenará los valores que definen el camino encontrado
 		 * @return bool
 		 */
-		bool CalcularCaminoANodo(const T& dato, std::list<T>& camino) override;
+		bool CalcularCaminoANodo(const T& dato, std::vector<T>& camino) override;
 	private:
 		// Almacena el puntero inteligente del nodo derecho. Puede almacenar nulo
 		std::unique_ptr<Nodo<T>> nodo_der;
@@ -90,19 +90,37 @@ namespace arboles {
 	}
 
 	template<typename T>
-	void NodoBinario<T>::Agreagar(const T& dato)
+	void NodoBinario<T>::Agregar(const T& dato)
 	{
+		if (dato < this->ObtenerValor()) {
+			if (nodo_izq == nullptr)
+				nodo_izq = std::make_unique<NodoBinario<T>>(dato);
+			else
+				nodo_izq->Agregar(dato);
+		}
+		else if (dato > this->ObtenerValor()){
+			if (nodo_der == nullptr)
+				nodo_der = std::make_unique<NodoBinario<T>>(dato);
+			else
+				nodo_der->Agregar(dato);
+		}
 	}
 
 	template<typename T>
 	bool NodoBinario<T>::EsHoja()
 	{
-		return false;
+		return nodo_der == nullptr && nodo_izq == nullptr;
 	}
 
 	template<typename T>
-	bool NodoBinario<T>::CalcularCaminoANodo(const T& dato, std::list<T>& camino)
+	bool NodoBinario<T>::CalcularCaminoANodo(const T& dato, std::vector<T>& camino)
 	{
+		camino.push_back(this->ObtenerValor());
+		if (dato == this->ObtenerValor())
+			return true;
+		if ((nodo_izq != nullptr && nodo_izq->CalcularCaminoANodo(dato, camino)) || (nodo_der != nullptr && nodo_der->CalcularCaminoANodo(dato, camino)))
+			return true;
+		camino.pop_back();
 		return false;
 	}
 }

@@ -32,7 +32,7 @@ SOFTWARE.
 
 #pragma once
 
-#include <list>
+#include <vector>
 
 namespace arboles {
 	/**
@@ -63,7 +63,7 @@ namespace arboles {
 		 * @param dato: Dato usado para asignar al nodo
 		 * @return void
 		 */
-		virtual void Agreagar(const T& dato) = 0;
+		virtual void Agregar(const T& dato) = 0;
 		/**
 		 * @brief Responde verdadero si el nodo es una hoja, es decir no tiene nodos hijos.
 		 *	Falso en caso contrario.
@@ -78,7 +78,7 @@ namespace arboles {
 		 * @param camino: Lista que almacenará los valores que definen el camino encontrado
 		 * @return bool
 		 */
-		virtual bool CalcularCaminoANodo(const T& dato, std::list<T>& camino) = 0;
+		virtual bool CalcularCaminoANodo(const T& dato, std::vector<T>& camino) = 0;
 	private:
 		// Almacena el valor del nodo actual
 		T valor;

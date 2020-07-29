@@ -23,46 +23,60 @@ SOFTWARE.
 **********************************************************************************/
 
 /**
- * @file basedatostest.cpp
- * @brief Archivo que implementa las pruebas unitarias para la base de datos
- * y el mapeo de árbol binario
+ * @file servidorrest.h
+ * @brief Define la clase para el servidor REST. Con el fin de
+	exponer las funcionalidades del sistema como un API REST
  * @author Jose Manuel Vargas Montero
- * @date julio 26 de 2020
+ * @date julio 27 de 2020
  *
  */
 
-#include <vector>
-#include <string>
-#include <fstream>
+#pragma once
 
-#include "gtest/gtest.h"
+#include <cpprest/http_listener.h>
+#include <cpprest/filestream.h>
 
-#include "conexionbd.h"
-#include "mapeadorarbolbinario.h"
+#include "controladorrest.h"
 
-TEST(BaseDeDatos, PruebaConexion)
+namespace servicio
 {
-    std::string nombre_archivo("basedatos_pruebas.db");
-    basedatos::ConexionBD conexion(nombre_archivo);
-    std::ifstream archivo(nombre_archivo);
-    bool valor_good_esperado = true;
-    bool valor_good_real = archivo.good();
-    archivo.close();
-    EXPECT_EQ(valor_good_real, valor_good_esperado);
-    // Segunda prueba
-    std::string nombre_arbol("Arbol prueba");
-    std::vector<int> valores({ 4, 7, 2, 9, 10, 1, 14 });
-    basedatos::MapeadorArbolBinario mapeador(conexion);
-    long id_arbol = mapeador.GuardarArbol(nombre_arbol, valores);
-    long id_minimo = 1;
-    EXPECT_GE(id_arbol, id_minimo);
-    std::unique_ptr<arboles::ArbolBinario<int>> arbol = mapeador.ConsultarArbolPorID(id_arbol);
-    bool es_nulo = arbol == nullptr;
-    bool esperado_nulo = false;
-    EXPECT_EQ(es_nulo, esperado_nulo);
-    if (!es_nulo)
-        EXPECT_EQ(nombre_arbol, arbol->ObtenerNombre());
-    if (valor_good_real)
-        std::remove(nombre_archivo.c_str());
+	/**
+	* @brief Clase para exponer servicio API REST
+	* Ejemplo
+	servicio::ServidorREST servidor;
+	servidor.Abrir();
+	std::cin.get();
+	servidor.Cerrar();
+	*/
+	class ServidorREST
+	{
+	public:
+		/**
+		* @brief Constructor que inicializa las URIs y el controlador
+		*/
+		ServidorREST();
+		/**
+		* @brief Destructor para detener el servidor
+		*/
+		~ServidorREST();
+		/**
+		* @brief Inicia el servidor esperando arranque completamente
+		* @return void:
+		*/
+		void Abrir();
+		/**
+		* @brief Cierrar el servidor esperando se detenga completamente
+		* @return void:
+		*/
+		void Cerrar();
+	private:
+		// URL en la que escuchará el servidor
+		web::http::uri uri_base;
+		// Objeto HTTP listener de la librería
+		web::http::experimental::listener::http_listener servidor;		
+		// Bandera para saber si se está escuchando en la dirección
+		bool esta_escuchando;
+		ControladorREST controlador;
+	};
 }
 

@@ -45,27 +45,28 @@ basedatos::MapeadorArbolBinario::MapeadorArbolBinario(ConexionBD& con)
 
 std::unique_ptr<arboles::ArbolBinario<int>> basedatos::MapeadorArbolBinario::ConsultarArbolPorID(long id)
 {
-	soci::row fila = (sesion_sql.prepare << "SELECT nombre FROM ArbolBinario WHERE id = " << id);
-	arboles::ArbolBinario<int> * arbol = new arboles::ArbolBinario<int>(file.get<std::string>(0), id);
-	soci::rowset<soci::row> conjunto_filas = (sesion_sql.prepare << "SELECT valor FROM Nodo WHERE arbol_id = " << id);
+	std::string nombre;
+	sesion_sql << "SELECT nombre FROM arbolbinario WHERE id = " << id, soci::into(nombre);
+	std::unique_ptr<arboles::ArbolBinario<int>> arbol = std::make_unique<arboles::ArbolBinario<int>>(nombre, id);
+	soci::rowset<soci::row> conjunto_filas = (sesion_sql.prepare << "SELECT valor FROM nodo WHERE arbol_id = " << id);
 	for (soci::row const & f : conjunto_filas)
 		arbol->Agregar(f.get<int>(0));
-	return std::unique_ptr<arboles::ArbolBinario<int>>(arbol);
+	return std::move(arbol);
 }
 
 long basedatos::MapeadorArbolBinario::GuardarArbol(const std::string& nombre, std::vector<int>& valores)
 {
-	long ultimo_id = 1;
-	sesion_sql << "INSERT INTO ArbolBinario (id, creacion, nombre) "
-		"VALUES (:id, :crea, :nomb);",
-		use(ultimo_id, "id"),
-		use(fechas::ConvertirFechaActualAString(), "crea"),
-		use(nombre, "nomb");
+	sesion_sql << "INSERT INTO arbolbinario (creacion, nombre) "
+		"VALUES (:crea, :nomb);",
+		soci::use(fechas::ConvertirFechaActualAString(), "crea"),
+		soci::use(nombre, "nomb");
+	long ultimo_id;
+	sesion_sql << "SELECT last_insert_rowid();", soci::into(ultimo_id);
 	for (auto& valor: valores)
-		sesion_sql << "INSERT INTO Nodo (arbol_id, valor) "
+		sesion_sql << "INSERT INTO nodo (arbol_id, valor) "
 			"VALUES (:arbol, :valor);",
-			use(ultimo_id, "arbol"),
-			use(valor, "valor");
+			soci::use(ultimo_id, "arbol"),
+			soci::use(valor, "valor");
 	return ultimo_id;
 }
 

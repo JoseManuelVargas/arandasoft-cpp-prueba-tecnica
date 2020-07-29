@@ -7,6 +7,10 @@ Repositorio para el desarrollo de la prueba
 Se debe realizar un servicio REST que permite crear árboles binarios y consultar los ancestros de un árbol dado.
 La información técnica se encuentra en el siguiete [documento](prueba_tecnica_cpp.pdf).
 
+## Requisitos
+* Se debe contar con SQLite3 instalado en el computador. Se requieren los archivos include y de librerías para ser utilizados al momento de construir SOCI.
+* Se debe contar con [cpprestsdk](https://github.com/microsoft/cpprestsdk) instalado. Para Windows se asume ha sido instalado usando VCPKG. Este se asume que está en el directorio c:/dev/vcpkg. En caso de no ser así se puede establecer la ruta con -DVCPKG_ROOT. Se puede incluir esta librería manualmente una vez corrida la sentencia cmake [opciones] .. abriendo el proyecto de Visual Studio e instalando la librería con el administrador de paquetes Nuget.
+
 ## Carpetas
 Se usan las siguientes carpetas para los usos señalados más abajo:
 
@@ -46,6 +50,6 @@ El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpet
 * soci: ORM para bases de datos para lenguaje de programación C++. En este caso se integra con SQLite como gestor de base de datos. Se toma del [repositorio](https://github.com/SOCI/soci)
 * arboles: Define las clases e implementa la lógica para el manejo de árboles binarios.
 * basedatos: Define las clases necesarias para conectar una base de datos SQLite usando SOCI. También define los mapeados necesarios para consultar y almacenar los objetos.
-
+* servicio: Define el cliente y servidor REST. El servidor se encargará de exponer el API REST, mientras que el cliente se usa para realizar pruebas unitarias al servicio. Define el controlador y las clases del servicio, para validar errores en las solicitudes y responder con el mensaje adecuado.
 
 

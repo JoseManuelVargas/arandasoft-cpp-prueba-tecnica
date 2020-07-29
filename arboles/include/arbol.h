@@ -77,7 +77,7 @@ namespace arboles {
 		 * @param dato: Dato usado para asignar al nodo
 		 * @return void
 		 */
-		virtual void Agreagar(const T& dato) = 0;
+		virtual void Agregar(const T& dato) = 0;
 		/**
 		 * @brief Responde verdadero si el árbol está vacío, es decir no tiene nodos
 		 *	Falso en caso contrario.
@@ -121,7 +121,7 @@ namespace arboles {
 	template<typename T>
 	bool Arbol<T>::EstaVacio()
 	{
-		return true;
+		return this->raiz == nullptr;
 	}
 }
 

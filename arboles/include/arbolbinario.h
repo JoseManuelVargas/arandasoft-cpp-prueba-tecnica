@@ -36,6 +36,7 @@ SOFTWARE.
 #include <string>
 
 #include "arbol.h"
+#include "nodobinario.h"
 
 namespace arboles {
 	/**
@@ -67,7 +68,7 @@ namespace arboles {
 		 * @param dato: Dato usado para asignar al nodo
 		 * @return void
 		 */
-		void Agreagar(const T& dato);
+		void Agregar(const T& dato);
 		/**
 		 * @brief Calcula el ancestro común a dos nodos con valores
 		 *	dato1 y dato2. A menos que el árbol esté vacío, siempre devolverá un valor
@@ -75,7 +76,7 @@ namespace arboles {
 		 * @param dato: Dato usado para asignar al nodo
 		 * @return void
 		 */
-		const T& CalcularAncestroComun(const T& dato1, const T& dato2);
+		T CalcularAncestroComun(const T& dato1, const T& dato2);
 	};
 
 	template<typename T>
@@ -91,14 +92,26 @@ namespace arboles {
 	}
 
 	template<typename T>
-	void ArbolBinario<T>::Agreagar(const T& dato)
+	void ArbolBinario<T>::Agregar(const T& dato)
 	{
+		if (this->raiz == nullptr)
+			this->raiz = std::make_unique<NodoBinario<T>>(dato);
+		else
+			this->raiz->Agregar(dato);
 	}
 
 	template<typename T>
-	const T& ArbolBinario<T>::CalcularAncestroComun(const T& dato1, const T& dato2)
+	T ArbolBinario<T>::CalcularAncestroComun(const T& dato1, const T& dato2)
 	{
-		return this->raiz->ObtenerValor();
+		std::vector<T> camino1, camino2;
+		if (!this->raiz->CalcularCaminoANodo(dato1, camino1) || !this->raiz->CalcularCaminoANodo(dato2, camino2))
+			return T(-1);
+		int i;
+		for (i = 0; i < camino1.size() && i < camino2.size(); i++) {
+			if (camino1[i] != camino2[i])
+				break;
+		}
+		return camino1[i];
 	}
 }
 

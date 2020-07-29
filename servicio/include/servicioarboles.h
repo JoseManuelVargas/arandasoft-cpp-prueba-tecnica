@@ -23,46 +23,45 @@ SOFTWARE.
 **********************************************************************************/
 
 /**
- * @file basedatostest.cpp
- * @brief Archivo que implementa las pruebas unitarias para la base de datos
- * y el mapeo de árbol binario
+ * @file servicioarboles.h
+ * @brief Define la clase para el Servicio REST de árboles binarios. Con el fin de
+	manejar las funciones referentes a árboles binarios
  * @author Jose Manuel Vargas Montero
- * @date julio 26 de 2020
+ * @date julio 27 de 2020
  *
  */
 
-#include <vector>
-#include <string>
-#include <fstream>
+#pragma once
 
-#include "gtest/gtest.h"
+#include <cpprest/http_client.h>
 
-#include "conexionbd.h"
-#include "mapeadorarbolbinario.h"
+#include "utilidadesservicio.h"
 
-TEST(BaseDeDatos, PruebaConexion)
+namespace servicio
 {
-    std::string nombre_archivo("basedatos_pruebas.db");
-    basedatos::ConexionBD conexion(nombre_archivo);
-    std::ifstream archivo(nombre_archivo);
-    bool valor_good_esperado = true;
-    bool valor_good_real = archivo.good();
-    archivo.close();
-    EXPECT_EQ(valor_good_real, valor_good_esperado);
-    // Segunda prueba
-    std::string nombre_arbol("Arbol prueba");
-    std::vector<int> valores({ 4, 7, 2, 9, 10, 1, 14 });
-    basedatos::MapeadorArbolBinario mapeador(conexion);
-    long id_arbol = mapeador.GuardarArbol(nombre_arbol, valores);
-    long id_minimo = 1;
-    EXPECT_GE(id_arbol, id_minimo);
-    std::unique_ptr<arboles::ArbolBinario<int>> arbol = mapeador.ConsultarArbolPorID(id_arbol);
-    bool es_nulo = arbol == nullptr;
-    bool esperado_nulo = false;
-    EXPECT_EQ(es_nulo, esperado_nulo);
-    if (!es_nulo)
-        EXPECT_EQ(nombre_arbol, arbol->ObtenerNombre());
-    if (valor_good_real)
-        std::remove(nombre_archivo.c_str());
+	/**
+	* @brief Clase para manejar los servicios de árboles binarios.
+	* Ejemplo
+	ServicioArboles servicio;
+	servicio.CrearArbolBinario(mensaje);
+	*/
+	class ServicioArboles : public UtilidadesServicio
+	{
+	public:
+		/**
+		* @brief Constructor 
+		*/
+		ServicioArboles() = default;
+		/**
+		* @brief El método procesa la creación de árbol binario
+		* @return void: El método se encarga de responder el mensaje HTTP
+		*/
+		void CrearArbolBinario(web::http::http_request& mensaje);
+		/**
+		* @brief Procesa el cálculo de ancestro común a dos nodos
+		* @return void: El método se encarga de responder el mensaje HTTP
+		*/
+		void CalcularAncestroComun(web::http::http_request& mensaje);
+	};
 }
 

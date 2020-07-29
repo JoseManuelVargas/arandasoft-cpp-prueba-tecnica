@@ -21,7 +21,7 @@ paths:
       tags:
       - "arbolbinario"
       summary: "Crear nuevo árbol binario."
-      description: "Se creara un nnuevo árbol binario con los valores enviados y se almacena en base de datos"
+      description: "Se creara un nuevo árbol binario con los valores enviados y se almacena en base de datos"
       operationId: "crearArbol"
       consumes:
       - "application/json"
@@ -64,7 +64,7 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Nombre del árbol y los valores de los dos nodos"
+        description: "ID del árbol y los valores de los dos nodos"
         required: true
         schema:
           $ref: "#/definitions/AncestroNodos"
@@ -102,12 +102,16 @@ definitions:
       id:
         type: "integer"
         format: "int64"
-      name:
-        type: "string"
+      nodo1:
+        type: "integer"
+        format: "int64"
+      nodo2:
+        type: "integer"
+        format: "int64"
   RespuestaError:
     type: "object"
     properties:
-      id:
+      error:
         type: "integer"
         format: "int64"
       mensaje:
@@ -115,11 +119,9 @@ definitions:
   RespuestaAncestroComun:
     type: "object"
     properties:
-      valor:
+      ancestro:
         type: "integer"
         format: "int64"
-      mensaje:
-        type: "string"
   RespuestaArbolCreado:
     type: "object"
     properties:
@@ -128,3 +130,4 @@ definitions:
         format: "int64"
       nombre:
         type: "string"
+
