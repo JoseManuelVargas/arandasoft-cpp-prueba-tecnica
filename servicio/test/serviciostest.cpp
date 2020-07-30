@@ -55,13 +55,13 @@ TEST(BaseDeDatos, PruebaConexion)
     int id_arbol = mapeador.GuardarArbol(nombre_arbol, valores);
     servicio::ClienteREST cliente;
     int ancestro1 = cliente.ConsultarAncestroComun(id_arbol, 10, 2);
-    int ancestro1_esperado = 7;
+    int ancestro1_esperado = 4;
     EXPECT_EQ(ancestro1, ancestro1_esperado);
     id_arbol = cliente.CrearArbol(U("Arbol 1"), valores);
     int id_minimo = 0;
     EXPECT_GT(id_arbol, id_minimo);
     int ancestro2 = cliente.ConsultarAncestroComun(id_arbol, 7, 2);
-    int ancestro2_esperado = 7;
+    int ancestro2_esperado = 4;
     EXPECT_EQ(ancestro2, ancestro2_esperado);
     ancestro1 = cliente.ConsultarAncestroComun(id_arbol, 9, 14);
     std::unique_ptr<arboles::ArbolBinario<int>> arbol = mapeador.ConsultarArbolPorID(id_arbol);

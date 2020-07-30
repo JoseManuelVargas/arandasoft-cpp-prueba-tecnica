@@ -111,6 +111,8 @@ namespace arboles {
 			if (camino1[i] != camino2[i])
 				break;
 		}
+		if (i > 0)
+			i--;
 		return camino1[i];
 	}
 }

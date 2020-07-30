@@ -8,6 +8,8 @@ add_executable(${This} arbolestest.cpp)
 
 target_link_libraries(${This} gtest_main arboles)
 
+configure_file(conjuntoarboles.dat conjuntoarboles.dat COPYONLY)
+
 add_test(NAME ${This} COMMAND ${This})
 
 add_custom_command(TARGET ${This} COMMENT "Ejecutando test de arboles y nodos" POST_BUILD COMMAND ${This})

@@ -55,5 +55,5 @@ El proyecto cuenta con diferentes módulos, cada uno estará en su propia carpet
 ## Pruebas
 Cada módulo cuenta con su conjunto de pruebas unitarias.
 Adicionalmente se crea un código en python que realiza pruebas unitarias de manera externa, ubicado en www/pruebs.py Para ejecutarlo se debe correr la aplicación y  luego ejecutarla usando python3 www/pruebas.py
-
+Para realizar pruebas con conjunto de datos se debe utilizar el script de python www/generadorarboles.py. Este código generará un archivo .dat que debe ser guardado en al carpeta de pruebas del módulo de pruebas. Por defecto se generan 500 árboles para la prueba y entre 5 a 10 cálculos de ancestros. La generación es aleatoria, tanto en valores como en dimensión de los árboles.
 

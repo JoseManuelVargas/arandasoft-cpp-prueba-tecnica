@@ -31,11 +31,76 @@ SOFTWARE.
  */
 
 #include <vector>
+#include <fstream>
+#include <memory>
+#include <iostream>
 
 #include "gtest/gtest.h"
 
 #include "nodobinario.h"
 #include "arbolbinario.h"
+
+std::unique_ptr<arboles::ArbolBinario<int>> CrearArbol(std::ifstream& archivo)
+{
+	std::cout << "Probando nuevo árbol binario en conjunto" << std::endl;
+    	archivo.ignore();
+    	if (archivo.peek() == ',') {
+		archivo.ignore();
+    	}
+    	if (archivo.peek() == '\n') {
+		archivo.ignore();
+    	}
+    	return std::make_unique<arboles::ArbolBinario<int>>("Arbol1");
+}
+
+TEST(ArbolTest, ConjuntoDatos)
+{
+	std::ifstream archivo("conjuntoarboles.dat");
+	if (!archivo) {
+		std::cout << "No se encontró archivo para la prueba de árboles con conjunto de datos" << std::endl;
+		return;
+	}
+    	char caracter;
+    	int i;
+	std::vector<int> nodos;
+    	nodos.reserve(3);
+	bool respuesta_vacio = true;
+    	bool creando_arbol = true;
+	int ancestro;
+    	std::unique_ptr<arboles::ArbolBinario<int>> arbol = nullptr;
+    	if (archivo.peek() == 'a') {
+		creando_arbol = true;
+		arbol = CrearArbol(archivo);
+		EXPECT_EQ(arbol->EstaVacio(), respuesta_vacio);
+    	}
+    	while (!archivo.eof()) {
+		while (archivo >> i) {
+	    		if (creando_arbol) {
+				arbol->Agregar(i);
+	    		}
+	    		else
+				nodos.push_back(i);
+	    		if (archivo.peek() == ',') {
+				archivo.ignore();
+	    		}
+	    		if (archivo.peek() == '\n') {
+				archivo.ignore();
+				if (nodos.size() == 3) {
+		    			ancestro = arbol->CalcularAncestroComun(nodos.at(0), nodos.at(1));
+					EXPECT_EQ(ancestro, nodos.at(2));
+				}
+				creando_arbol = false;
+				nodos.clear();
+	    		}
+	    		if (archivo.peek() == 'a') {
+				creando_arbol = true;
+				arbol = CrearArbol(archivo);
+	    			EXPECT_EQ(arbol->EstaVacio(), respuesta_vacio);
+	    		}
+		}
+    	}
+    	archivo.close();
+}
 
 TEST(ArbolTest, CreacionArbol)
 {
@@ -103,7 +168,7 @@ TEST(ArbolTest, AncestroComun1)
     EXPECT_EQ(arbol.EstaVacio(), respuesta_vacio);
     if (!arbol.EstaVacio()) {
     	int ancestro = arbol.CalcularAncestroComun(5, 4);
-    	int ancestro_esperado = 3;
+    	int ancestro_esperado = 2;
     	EXPECT_EQ(ancestro, ancestro_esperado);
     }
 }

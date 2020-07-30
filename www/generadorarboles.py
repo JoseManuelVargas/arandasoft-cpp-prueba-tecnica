@@ -60,7 +60,7 @@ if __name__ == "__main__":
         arbol = Nodo(valores[0])
         for valor in valores[1:]:
             arbol.insertar(valor)
-        texto += "arbol\n"
+        texto += "a\n"
         texto += ",".join(str(x) for x in valores) + "\n"
         ancestros = random.randint(5, 10)
         for i in range(ancestros):
